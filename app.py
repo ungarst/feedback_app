@@ -56,7 +56,8 @@ error_files = {
     'Assignment to variable expected' : 'expected_assignment_operator.html',
     'If without conditional' : 'if_without_conditional.html',
     'Illegal increment or decrement' : 'incorrect_increment_or_decrement.html',
-    'InvalidCharacter' : 'invalid_character.html'
+    'InvalidCharacter' : 'invalid_character.html',
+    'No match' : 'no_match.html'    
 }
 
 @app.route('/')
@@ -76,14 +77,8 @@ def report ():
 @app.route('/feedback', methods=['GET', 'POST'])
 def feedback():
     """Registers the user."""
-
-    if request.method == 'POST':
-        code = request.form['code']
-        errors = request.form['errors']
-        return render_template('success.html', code=code, errors=errors)
-    else:
-        return render_template('feedback.html')
+    return render_template('feedback.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
+    app.run(host='0.0.0.0', port=port, debug=True)

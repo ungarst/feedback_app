@@ -663,8 +663,10 @@ class Submission(object):
 
 
 def diagnose(code, errors):
-	sub = Submission("", code, errors)
-	return sub.diagnose()[0]
+	sub = (Submission("", code, errors)).diagnose()
+	if not sub:
+		return "No match"
+	return sub[0]
 	
 
 

@@ -1,7 +1,7 @@
 from flask import Flask, request, session, url_for, redirect, \
      render_template, abort, g, flash, _app_ctx_stack
 import recognizer
-import os
+git import os
 
 app = Flask(__name__)
 
@@ -57,6 +57,7 @@ error_files = {
     'If without conditional' : 'if_without_conditional.html',
     'Illegal increment or decrement' : 'incorrect_increment_or_decrement.html',
     'InvalidCharacter' : 'invalid_character.html'
+    'No match' : 'no_match.html'
 }
 
 @app.route('/')
@@ -76,13 +77,7 @@ def report ():
 @app.route('/feedback', methods=['GET', 'POST'])
 def feedback():
     """Registers the user."""
-
-    if request.method == 'POST':
-        code = request.form['code']
-        errors = request.form['errors']
-        return render_template('success.html', code=code, errors=errors)
-    else:
-        return render_template('feedback.html')
+    return render_template('feedback.html')
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 5000))
