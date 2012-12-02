@@ -1,0 +1,23 @@
+<p>Your code couldn't compile this time. Let's have a look why...</p>
+
+<p>Looking at your code, it appears that you are calling a method including the variable type with the variable type in the parameters (e.g. <code>someMethod(int 5);</code> ).</p>
+
+<p>It is unnessasary to do this, as Java already knows what type the variables are from when they were declared originally. Remove the variable types from in front of the variable names in the method calls and try run your code again.</p>
+
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+String word = "Programming";
+int position = 4;
+String end = word.substring(int position);
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+String word = "Programming";
+int position = 4;
+String end = word.substring(position);
+</pre></code>

@@ -1,0 +1,32 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>Looking at your code and the error that Java found, it appears that you are are performing a comparison using a single equals sign.</p>
+
+<p>Remember, if you want to test if two things are equal you need to use two equals signs.</p>
+
+<p>One equals sign assigns the value on the right to the variable on the left.</p>
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int a = 10;
+int b = 8;
+if (a = b) { // This line assigns the value of b to a, and resolves to an int not a boolean. If we want to compare them we need to use two equals signs.
+	return true;
+} else {
+	return false;
+}
+</pre></code> 
+
+<p>Correct Code</p>
+<code><pre>
+int a = 10;
+int b = 8;
+if (a == b) { // This line assigns the value of b to a, and resolves to an int not a boolean. If we want to compare them we need to use two equals signs.
+	return true;
+} else {
+	return false;
+}
+</pre></code> 

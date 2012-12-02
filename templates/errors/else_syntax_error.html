@@ -1,0 +1,51 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears that one of your if statements is written incorrectly. Lets quickly revise the correct structure of an if statement</p>
+
+<code><pre>
+if (condition) { // The condition must evaluate to a boolean and must be wrapped inside parenthesis followed by a curly bracket
+	// Statements
+} else if (condition) { // The else if must be preceeded with a closing curly bracket, and then follow the same rules as the if statement
+	// Statements
+} else { // The else must be preceeded by a closing curly brace and followed by and opening curly brace
+	// Statements
+}
+</pre></code>
+
+<p>The most likely cause of you error is having a semicolon after the if condition (see the example for a full explanation).</p>
+
+<p>Ensure that all your if statements are written correctly and then try run your code again.</p>
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int c = 4;
+/** 
+* The semicolon after the if statement finishes the conditional area, and so all code after it will be executed regardless.
+* The following opening curly brace opens a new block of code, which will always be executed. 
+* When it reaches the matching closing curly brace, the block of code is completed and execution will continue. 
+* The program then reaches the else condition, but it isn't preceeded by an if statement. 
+* As all else statements need to be preceeded by an if statement, Java throws an error.
+*/
+if (c > 6); { 
+	return true;
+} else { 
+	return false;
+}
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int c = 4;
+/**
+* Removing the semicolon means that the following block will only be executed if c is greater than 6.
+* The program then reaches the else statement which is preceeded by an if statement, so the else condition makes sense to Java
+*/
+if (c > 6) {
+	return true;
+} else { 
+	return false;
+}
+</pre></code>

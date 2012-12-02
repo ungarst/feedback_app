@@ -1,0 +1,13 @@
+{% block title %}Get Feedback Here!{% endblock %}
+{% block body %}
+  <h1>Get more student friendly errors here! </h1>
+  <form action="/report" method=post>
+      <h2>Code</h2>
+      <textarea name=code rows="20" cols="50" value="{{ request.form.code }}"></textarea>
+      </br>
+      <h2>Errors</h2>
+      <textarea name=errors rows="20" cols="50" value="{{ request.form.errors }}"></textarea>
+
+    <div class=actions><input type=submit value="Submit"></div>
+  </form>
+{% endblock %}

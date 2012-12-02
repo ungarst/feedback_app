@@ -1,0 +1,20 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears that you tried to invoke a method on an object that the object didn't have.</p>
+
+<p>Check the Java API to make sure that the method you are calling exists for that type of object and then try run your code again.</p>
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+char c = 'b';
+char d = c.charAt(0); // The method charAt(int index) doesn't exist for type character
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+String c = "b";
+char d = c.charAt(0); // The method charAt(int index) exists for type String
+</pre></code>

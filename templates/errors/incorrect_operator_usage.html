@@ -1,0 +1,26 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears you tried to use one of the basic operators (+, -, *, /,  or %) on a type which it is not allowed.</p>
+
+<p>Most types other than int and double don't support these operations so you will have to define the logic for them yourself.</p>
+
+<p>Make sure that you are not using these operators on types for which they aren't defined and then try run your code again.</p>
+
+ 
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+String firstString = "I love programming in Java";
+String secondString = " in Java";
+
+String thirdString = firstString - secondString;
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+String firstString = "I love programming in Java";
+String secondString = " in Java";
+
+String thirdString = firstString.replace(secondString, "");
+</pre></code>

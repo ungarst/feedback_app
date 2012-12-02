@@ -1,0 +1,42 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>The Java compiler has suggested that you are missing an operator in your code. A lot of the time the missing operator could be an equals sign, but it can also be other operators like +, -, /, *, %, || and &&.</p>
+
+<p>In cases where the operator should be an equals left part of the line looks like something that could be a variable name, and the right part looks like something that could be assigned to the left part so the compiler suggests inserting an equals sign as to assign the right part to the left.</p>
+
+<p>In cases where the operator should not be an equals sign, have a go at putting one of +, -, /, *, %, || or && into the line to make the expression make sense..</p>
+
+<p><strong>Examples of potential assignment</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+// Most of these errors can be fixed by inserting an equals
+productIsEven true;
+string "hello";
+string s;
+word "" + firstLetter + words + lastLetter;
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+productIsEven = true;
+string = "hello";
+string = s;
+word = "" + firstLetter + words + lastLetter;
+</pre></code>
+
+<p><strong>Examples of a missing operator</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+if (productIsEven(int)(a*b)){  // Can be solved by putting an equals between productIsEven and assigning it a*b 
+overtimeHours = 2(normalHours);  // Can be solved by putting a multiplication between 2 and (normalHours)
+if ((age < 20)  (age <=40)) {  // Can be solved by putting a && or || after (age < 20)
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+if (productIsEven = (int)(a*b)){  
+overtimeHours = 2 * (normalHours);  
+if ((age < 20) || (age <=40)) {  
+</pre></code>

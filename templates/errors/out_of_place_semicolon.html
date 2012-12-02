@@ -1,0 +1,37 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears that you have an out of place semicolon in your code. This is generally caused by one of two things:</p>
+<ul>
+	<li>Having an extra semicolon in your code. This most commonly occurs in at the end of a line where the programmer puts a semicolon before the last closing parenthesis (see example below).</li>
+	<li>Incorrect variable declaration where the programmer forgets to specify the variable type in front of the variable name.</li>
+</ul>
+
+
+<p><strong>Example of extra semicolon</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int product = 8*7;
+if ( product % 2 == 0;) { // Semicolon at the end of the comparison is not required
+} 
+</pre></code>
+
+<p>Incorrect Code</p>
+<code><pre>
+int product = 8*7;
+if ( product % 2 == 0) { // Removing the semicolon allows the error to disappear.
+	return true;
+} 
+</pre></code>
+
+<p><strong>Example of incorrect declaration</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+hours; // Forgetting to declare the type of the variable at declaration
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int hours; // Specifying the variable type at declaration fixes this error.
+</pre></code>

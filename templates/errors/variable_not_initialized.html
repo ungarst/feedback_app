@@ -1,0 +1,31 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears one of your variables is being accessed without being initialized.</p>
+
+<p>This is generally a result of declaring a variable without giving it an initial value and then trying to read it later on.</p>
+
+<p>Common occurences of this error are:</p>
+<ul>
+	<li>Using a for-loop to generate the sum of an array, but not setting the sum variable to zero before the for-loop (see below).</li>
+	<li>Using a while-loop, but forgetting to set the iterating variable.</li>
+</ul>
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int[] a = {4, 64, 92, 13, 9};
+int sum;
+for (int i = 0 ; i < a.length ; i++) {
+	sum += a[i]; // Trying to add a[i] to the current value of sum, but sum has no current value
+}		
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int[] a = {4, 64, 92, 13, 9};
+int sum = 0; // Sum starts as 0 so we can add a value to the current value of sum
+for (int i = 0 ; i < a.length ; i++) {
+	sum += a[i];
+}		
+</pre></code>

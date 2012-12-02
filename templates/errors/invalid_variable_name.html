@@ -1,0 +1,31 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears you have broken the Java naming conventions, meaning your code was unable to compile.</p>
+
+<p>The full Java naming conventions can be found in the <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html" target="_blank">Java Tutorials</a> but we've included a brief summary of them below which should help you solve your problem.</p>
+
+<ul>
+	<li>Variable names are case-sensitive.</li>
+	<li>Variable names can contain letters, numbers and underscores.</li>
+	<li>Variable names must begin with a letter.</li>
+	<li>Variable names must not be one of the Java keywords (e.g. int, new)</li>
+</ul>
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int new = 10; // new is a keyword and so cannot be used as a variable name
+String char = "c"; // char is also a keyword
+
+double 2ndNumber = 4.9; // variable names cannot start with a number
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int newVariable = 10;
+String character = "c";
+
+double secondNumber = 4.9;
+</pre></code>

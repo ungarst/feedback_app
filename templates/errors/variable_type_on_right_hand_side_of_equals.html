@@ -1,0 +1,21 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears that when initializing one of your variables you are including variable type on the right hand side of the equals sign.</p>
+
+<p>You don't need to do this as Java already knows if this is the right type of variable or not.</p>
+
+<p>Remove the variable type from the right hand side of the equals sign and try run your code again. </p>
+
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int a = int 7; // Don't need variable type in front 7
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int a = 7; // Removed variable type allows code to compile
+</pre></code>

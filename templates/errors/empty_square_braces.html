@@ -1,0 +1,39 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears that you have empty square brackets in your code, which is stopping your code from compiling properly.</p>
+
+<p>Programmers generally make this mistake because they:</p>
+<ul>
+	<li>Are trying to access an element in an array, but forget to put the index of the element they are trying to access in the square brackets.</li>
+	<li>Are trying to convert a string to an array of characters, but don't know how to do this properly.</li>
+</ul>
+
+<p><strong>Example of forgetting index</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+// We want to access the second element of the array a
+int[] a = {1, 2, 3, 4, 5};
+int second = a[]; // Forget to put the index in the square braces
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+// We want to access the second element of the array a
+int[] a = {1, 2, 3, 4, 5};
+int second = a[1]; // Forget to put the index in the square braces
+</pre></code>
+
+<p><strong>Example of converting a string to an array of characters</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+String s = "I love programming!";
+char[] characters = s[]; // Using this will not create an array of characters
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+String s = "I love programming!";
+char[] characters = s.toCharArray(); // Correct use of .toCharArray() to create array of characters
+</pre></code>

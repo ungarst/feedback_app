@@ -1,0 +1,37 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears one of your if statements isn't written properly.</p>
+<p>When we try to compare two things in an if statement, we need to use two equals signs.</p>
+<p>Remember:</p>
+<ul>
+	<li>One equals sign is for assigning a value to a variable e.g. int x = 10</li>
+	<li>Two equals signs are for comparing two things e.g. x == 10</li>
+</ul>
+
+
+
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int x = 5;
+int y = 13;
+if ((x*y)%2 = 0) { // If we are trying to compare then we need ot use two equals signs
+	return true;
+} else {
+	return false;
+}
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int x = 5;
+int y = 13;
+if ((x*y)%2 == 0) { // Correct way of comparing
+	return true;
+} else {
+	return false;
+}
+</pre></code>

@@ -1,0 +1,39 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears that you have an incorrectly formatted for loop in your code.</p>
+
+<p>The only requirements of a for loop is having two semicolons in parenthesis, but the correct structure of a for loop is:</p>
+
+<code><pre>
+for(initialization; boolean_expression; update)
+{
+   // statements
+}
+</pre></code>
+
+<p>Where:</p>
+<ul>
+	<li>The <code>initialization</code> is declaring and setting the iterating variable to it's start value.</li>
+	<li>The <code>boolean_expression</code> is an expression that must return true for the statements in the loop to be executed.</li>
+	<li>The <code>update</code> is the change to the iterating variable that should happen after each time through the loop.</li>
+</ul>
+
+<p>It is possible to rearrange this so the initialization and upadate are not within the parenthesis but this is the recommended way.</p>
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int sum = 0;
+for (int i = 0 ; i < 10 i++) { // Missing a semicolon after i < 10
+	sum += i;
+}
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int sum = 0;
+for (int i = 0 ; i < 10 ; i++) {
+	sum += i;
+}
+</pre></code>

@@ -1,0 +1,32 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears that you are incorrectly assigning to a variable in on of your if statements.</p>
+
+<p>Assignment in if statements must happen before the value of the variable is used in a comparison. Most of these kind of errors occure when people forget to put the assignment first or put their brackets in the wrong place (see example below).</p>
+
+<p>Ensure that you have your assignment and comparisons in the right order and your brackets are correct, then try run your code again.</p>
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+String word = "10";
+int x;
+if ((x = Integer.parseInt)(word < 3)) {
+	return true;
+} else {
+	return false;
+}
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+String word = "10";
+int x;
+if ((x = Integer.parseInt(word)) < 3) {
+	return true;
+} else {
+	return false;
+}
+</pre></code>

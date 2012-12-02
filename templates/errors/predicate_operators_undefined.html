@@ -1,0 +1,30 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears that you are attempting to compare two different types.</p>
+
+<p>Comparisons can only be made between things which are the same type e.g. comparing ints with ints or booleans with booleans.</p>
+
+<p>Have look through your code at all instances of ==, !=, <=, >= and make sure that they are only been used to compare things of the same type.</p>
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+boolean b = false;
+boolean c = false;
+double d = 10.5;
+if (b == d) { // Cannot compare b and d as they are not the same type
+	return true;
+}
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+boolean b = false;
+boolean c = false;
+double d = 10.5;
+if (b == c) { // b and c are both boolean so they can be compared
+	return true;
+}
+</pre></code>

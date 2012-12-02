@@ -1,0 +1,32 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears you are illegally using one or more of the following operators in your code:</p>
+<ul>
+	<li>&&</li>
+	<li>||</li>
+	<li>!</li>
+</ul>
+
+<p>Both && and || can only be used on two boolean values. ! can only be used on a single boolean value.</p>
+<p>Most occurances of this error are caused by expressions not evaluating booleans in if statements.</p>
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+double items = 100.0/9.0;
+
+if (items <= 10 && !0) { // ! can only be used on a boolean (0 is an int). && can only be used on two booleans but only the Left Hand Side is boolean
+	return false;
+}
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+double items = 100.0/9.0;
+
+if (items <= 10 && items != 0) { // Fixed the if statement so ! operator and && operater will both work
+	return false;
+}
+</pre></code>

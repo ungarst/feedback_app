@@ -1,0 +1,21 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears you are trying to use .length() as a method on an array.</p>
+
+<p>Make sure you remember that length is a field in an array so should be accessed using yourArrayName.length</p>
+
+<p>The .length() method is applicable for Strings though, and so should be accessed using stringName.length()</p>
+
+<p><strong>Example of finding the length of an array</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int[] a = {1, 2, 3, 4, 5};
+int len = a.length(); // Length is not a method and so should not be called with parenthesis after it
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int[] a = {1, 2, 3, 4, 5};
+int len = a.length;
+</pre></code>

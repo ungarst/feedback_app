@@ -1,0 +1,30 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears that you are misusing the <code>new</code> keyword. The new keyword is reserved for the construction of new objects.</p>
+
+<p>If you are attempting to call one of your variables new then this is most likely where this error is coming from.</p>
+
+<p>If you are not trying to call a variable new then you are attempting to construct an object incorrectly.</p>
+
+<p>Object construction is done by calling <code>new ObjectType (parameters)</code> and the object must be assigned to a variable or used in a method call. If the object's constructor doesn't take any parameters then you still need to include empty parenthesis.</p>
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int new = 10; // Cannot call a variable 'new'
+
+new String first = itemsString.charAt(0); // We don't need to put 'new' before the object type on the left hand side of the assignment
+
+String part = new String; // Need to include the parameters to the objects constructor.
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int newVariable = 10; // Changed variable name from new
+
+String part = new String (); // Include empty parenthesis as constructor takes no arguments.
+
+String first = itemsString.charAt(0); // Remove 'new' before the object type on the left hand side of the assignment
+</pre></code>

@@ -1,0 +1,17 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears your error is having a comma either directly after an opening brace or directly before a closing bracket.</p>
+
+<p>Either this is a typo, or you are using it to try and skip some parameters in a method, which Java doesn't allow you to do. Try searching the method in google to see if there is a way to avoid entering that parameter.</p>
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int x = someMethod(,10); // Delete the comma to get rid of this error.
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int x = someMethod(10);
+</pre></code>

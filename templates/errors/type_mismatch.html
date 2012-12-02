@@ -1,0 +1,24 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears your code encountered a type mismatch error.</p>
+<p>Type mismatch errors are caused by trying to assign a value to an variable where the value is a different type to the variable.</p>
+<p>Programmers should always be careful that they are only assigning values to variables of the same type, e.g. ints to variables of type int</p>
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+boolean b = false;
+int x = 1;
+b = x; // Booleans can only be true or false, so we cannot assign the value 1 to them. 
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+// Most likely we wanted b to be true if x was non zero.
+boolean b = false;
+int x = 1;
+if (x != 0) {
+	b = true;
+}
+</pre></code>

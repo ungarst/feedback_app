@@ -1,0 +1,38 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears that you have an incorrectly written if statement in your code.</p>
+<p>Lets quickly review the format of an an if statement and see if it can help you fix your error.</p>
+
+<code><pre>
+if (condition) { // The condition must evaluate to a boolean and must be wrapped inside parenthesis followed by a curly bracket
+	// Statements
+} else if (condition) { // The else if must be preceeded with a closing curly bracket, and then follow the same rules as the if statement
+	// Statements
+} else { // The else must be preceeded by a closing curly brace and followed by and opening curly brace
+	// Statements
+}
+</pre></code>
+
+<p>The if condition and block are the only required parts.</p>
+<p>It is possible to have:</p>
+<ul>
+	<li>if statements</li>
+	<li>if, else statements</li>
+	<li>if, else if, else statements</li>
+	<li>if, else if statements</li>
+</ul>
+<p>Ensure that all your if statements follow this format and then try compile your code again</p>
+
+<p><strong>Example</strong></p>
+
+<code><pre>
+int x = 15;
+int y;
+if (x == 15) {
+	y = 2;
+} else if (x > 15) {
+	y = 3;
+} else {
+	y = 1;
+}
+</pre></code>

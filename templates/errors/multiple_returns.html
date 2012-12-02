@@ -1,0 +1,22 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears you attempted to return multiple things packaged in parenthesis in your code.</p>
+
+<p>Java only allows us to return one thing. This must also have the same type as the return type specified in the method header.</p>
+
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int a = 12;
+String s = "Java";
+return (a, s); // Java does not let us return multiple things.
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int a = 12;
+String s = "Java";
+return a; // OR return s; We can only return one thing that is the same type as the return type specified in the method header
+</pre></code>

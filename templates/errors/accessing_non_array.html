@@ -1,0 +1,30 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It appears that you are attempting to use square brackets on a variable that is not an array.</p>
+
+<p>Square braces are used for accessing elements, and so can only be used on variables of type array</p>
+
+<p><strong>Example</strong></p>
+
+<code><pre>
+int[] a = {1, 2, 3, 4, 5};
+int second = a[1];
+</pre></code>
+
+<p>Many people encounter this error when trying to look at a single character from an array.</p>
+<p>Although accessing strings using square brackets works in some languages, it doesn't in Java</p>
+<p>If you want to access a single character from a string in Java, use the .charAt(int index) method.</p>
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+String s = "I love using CodeWrite";
+char secondCharacter = s[1]; // Trying to access the second character incorrectly using array style accessing
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+String s = "I love using CodeWrite";
+char secondCharacter = s.charAt(1); // Correctly usage of the .charAt(int index) method
+</pre></code>

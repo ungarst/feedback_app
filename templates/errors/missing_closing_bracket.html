@@ -1,0 +1,31 @@
+<p>Your code was unable to compile this time. Lets take a look why...</p>
+
+<p>It seems like one of the lines in your code is missing a closing parenthesis.</p>
+
+<p>Remember, every opening parenthesis must be matched with a closing parenthesis.</p>
+
+<p>Have a look at your code and ensure that all your brackets are matched, then try run your code again.</p>
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+String word = "Programming";
+
+char firstLetter = word.charAt(0);
+char secondLetter = word.charAt(word.length()-1);
+
+String newWord = (secondLetter + word.substring(word.length())+firstLetter;
+return newWord;
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+String word = "Programming";
+
+char firstLetter = word.charAt(0);
+char secondLetter = word.charAt(word.length()-1);
+
+String newWord = (secondLetter + word.substring(word.length())+firstLetter);
+return newWord;
+</pre></code>

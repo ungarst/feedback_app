@@ -1,0 +1,42 @@
+<p>It looks like your code was unable to compile. Lets take a look why...</p>
+
+<p>It seems like you are trying to create two variables with the same name in your method.</p>
+
+<p>Remember, you only have to declare a variable once even if you are assigning to it in multiple places</p>
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+int a = 5;
+...
+int a = 10; // Redefining a to be an integer is not required 
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+int a = 5;
+...
+a = 10; // a has been re-assigned to, but not redefined
+</pre></code>
+
+<p>This error may also be due to you redefining the arguments to the method that you are writing.</p>
+
+<p>This is unnecessary as Java already knows these variables exist after seeing them in the method header.</p>
+
+<p><strong>Example</strong></p>
+
+<p>Incorrect Code</p>
+<code><pre>
+public static int sum (int a, int b) {
+	int a, b; // a and b are declared here, even though they are already declared in the method header
+	return a + b;
+}
+</pre></code>
+
+<p>Correct Code</p>
+<code><pre>
+public static int sum (int a, int b) {
+	return a + b; // a and b have not been redefined
+}
+</pre></code>
