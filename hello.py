@@ -1,6 +1,8 @@
 from flask import Flask, request, session, url_for, redirect, \
      render_template, abort, g, flash, _app_ctx_stack
 import recognizer
+import os
+
 app = Flask(__name__)
 
 error_files = {
@@ -83,4 +85,5 @@ def feedback():
         return render_template('feedback.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
