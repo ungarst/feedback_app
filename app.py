@@ -20,7 +20,7 @@ error_files = {
     'Type mismatch' : 'type_mismatch.html',
     'Duplicate variable' : 'duplicate_variable.html',
     'Illegal modifiers' : 'illegal_modifier.html',
-    'None equals assignment' : 'assingment_not_using_equals.html',
+    'None equals assignment' : 'assignment_not_using_equals.html',
     'Wrong or no return type' : 'incorrect_return_type.html',
     'Unreachable code' : 'unreachable_code.html',
     'Too many curly braces' : 'too_many_curly_braces.html',

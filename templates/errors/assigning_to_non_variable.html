@@ -1,29 +1,47 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
+	<h3>It looks like your code was unable to compile. Let's take a look why...</h3>
 
-<p>It appears that you are attempting to assign to something that is not a varible.</p>
+	<p>It appears that you are attempting to assign to something that is not a varible.</p>
 
-<p>Java requires you to assign to a variable so that it knows where to store the result of your expression.</p>
+	<p>Java requires you to assign to a variable so that it knows where to store the result of your expression.</p>
 
-<p>To fix this, make sure that everything on the left and side of an equals sign is a variable. It may mean that you have to write a few more lines, but it will mean that your program will compile.</p>
+	<p>To fix this, make sure that everything on the left and side of an equals sign is a variable. It may mean that you have to write a few more lines, but it will mean that your program will compile.</p>
 
 
-<p><strong>Example</strong></p>
+	<div class="example">
 
-<p>Incorrect Code</p>
-<code><pre>
-String word = "programming";
+		<h4>Example</h4>
+
+		<table>
+			<tr>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+			</tr>	
+			<tr>
+				<td class="incorrectCode">
+<pre>String word = "programming";
 int position = 6;
 char replacement = 'z';
-word.charAt(postion) = replacement; // word.charAt(position) is not a variable so we cannot assign to it
-return word;
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-String word = "programming";
+/* word.charAt(position) is not a variable 
+	so we cannot assign to it */
+word.charAt(postion) = replacement;
+return word;</pre>
+				</td>
+				<td class="correctCode">
+<pre>String word = "programming";
 int position = 6;
 char replacement = 'z';
-char[] chars = word.toCharArray(); // Break the word up into a char array
-chars[6] = replacement; // Each element in the char array is a variable so we can assign to it
-return String.valueOf(chars); // Turn the char array back to a string 
-</pre></code>
+// Break the word up into a char array
+char[] chars = word.toCharArray(); 
+/* Each element in the char array is a 
+	variable so we can assign to it */
+chars[6] = replacement; 
+// Turn the char array back to a string
+return String.valueOf(chars);</pre>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+</div>	

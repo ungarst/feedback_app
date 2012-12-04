@@ -1,30 +1,43 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
+	<h3>It looks like your code was unable to compile. Let's take a look why...</h3>
 
-<p>It appears that you are attempting to use square brackets on a variable that is not an array.</p>
+	<p>It appears that you are attempting to use square brackets on a variable that is not an array.</p>
 
-<p>Square braces are used for accessing elements, and so can only be used on variables of type array</p>
+	<p>Square braces are used for accessing elements, and so can only be used on variables of type array</p>
 
-<p><strong>Example</strong></p>
+	<pre>int[] a = {1, 2, 3, 4, 5};
+	int second = a[1];</pre>
 
-<code><pre>
-int[] a = {1, 2, 3, 4, 5};
-int second = a[1];
-</pre></code>
+	<p>Many people encounter this error when trying to look at a single character from a String.</p>
 
-<p>Many people encounter this error when trying to look at a single character from an array.</p>
-<p>Although accessing strings using square brackets works in some languages, it doesn't in Java</p>
-<p>If you want to access a single character from a string in Java, use the .charAt(int index) method.</p>
+	<p>Although accessing strings using square brackets works in some languages, it doesn't in Java</p>
 
-<p><strong>Example</strong></p>
+	<p>If you want to access a single character from a string in Java, use the .charAt(int index) method.</p>
 
-<p>Incorrect Code</p>
-<code><pre>
-String s = "I love using CodeWrite";
-char secondCharacter = s[1]; // Trying to access the second character incorrectly using array style accessing
-</pre></code>
+	<div class="example">
 
-<p>Correct Code</p>
-<code><pre>
-String s = "I love using CodeWrite";
-char secondCharacter = s.charAt(1); // Correctly usage of the .charAt(int index) method
-</pre></code>
+		<h4>Example</h4>
+
+		<table>
+			<tr>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+			</tr>
+			<tr>
+				<td class="incorrectCode">
+<pre>String s = "I love using CodeWrite";
+/* Trying to access the second character incorrectly 
+	using array style accessing */
+char secondCharacter = s[1];</pre>
+				</td>
+				<td class="correctCode">
+<pre>String s = "I love using CodeWrite";
+/* Correctly usage of the .charAt(int index) method */
+char secondCharacter = s.charAt(1); </pre>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+</div>
