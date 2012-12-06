@@ -1,22 +1,38 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It appears your code caused a casting error when we were compiling it for you. Casting errors occur when you try and cast an object to a type it cant be casted to (e.g. casting a string to an int).</p>
+	<p>It appears your code caused a casting error when we were compiling it for you. Casting errors occur when you try and cast an object to a type it can't be casted to (e.g. casting a string to an int).</p>
 
-<p>Ensure that your variables are able to be casted from one type to another and try run your code again.</p>
+	<p>Ensure that your variables are able to be casted from one type to another and try run your code again.</p>
 
+	<div class="example">
 
-<p><strong>Example</strong></p>
+		<table>
 
-<p>Incorrect Code</p>
-<pre><code>
-int x;
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int x;
 String s = "Hello, World!";
-x = (int) s;
-</code></pre>
-
-<p>Correct Code</p>
-<pre><code>
-int x;
+x = (int) s;</pre>
+				</td>
+				<td class="correctCode">
+<pre>int x;
 double d = 34.92;
-x = (int) d;
-</code></pre>
+x = (int) d;</pre>
+				</td>
+				<td class="explanation">
+					<p>Strings cannot be casted to an integer, so the incorrect code cannot compile. Doubles can be casted to integers (although some precision is lost) so the correct code can compile.</p>
+				</td>
+			</tr>
+			
+		</table>
+
+	</div>
+
+</div>

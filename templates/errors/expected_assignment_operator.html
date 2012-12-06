@@ -1,42 +1,70 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>The Java compiler has suggested that you are missing an operator in your code. A lot of the time the missing operator could be an equals sign, but it can also be other operators like +, -, /, *, %, || and &&.</p>
+	<p>The Java compiler has suggested that you are missing an operator in your code. A lot of the time the missing operator could be an equals sign, but it can also be other operators like +, -, /, *, %, || and &&.</p>
 
-<p>In cases where the operator should be an equals left part of the line looks like something that could be a variable name, and the right part looks like something that could be assigned to the left part so the compiler suggests inserting an equals sign as to assign the right part to the left.</p>
+	<p>In cases where the operator should be an equals left part of the line looks like something that could be a variable name, and the right part looks like something that could be assigned to the left part so the compiler suggests inserting an equals sign as to assign the right part to the left.</p>
 
-<p>In cases where the operator should not be an equals sign, have a go at putting one of +, -, /, *, %, || or && into the line to make the expression make sense..</p>
+	<p>In cases where the operator should not be an equals sign, have a go at putting one of +, -, /, *, %, || or && into the line to make the expression make sense..</p>
 
-<p><strong>Examples of potential assignment</strong></p>
+	<div class="example">
 
-<p>Incorrect Code</p>
-<code><pre>
-// Most of these errors can be fixed by inserting an equals
-productIsEven true;
+		<table>
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>productIsEven true;
 string "hello";
 string s;
-word "" + firstLetter + words + lastLetter;
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-productIsEven = true;
+word "" + firstLetter + words + lastLetter;</pre>
+				</td>
+				<td class="correctCode">
+<pre>productIsEven = true;
 string = "hello";
 string = s;
-word = "" + firstLetter + words + lastLetter;
-</pre></code>
+word = "" + firstLetter + words + lastLetter;</pre>
+				</td>
+				<td class="explanation">
+					<p>Inserting an equals sign manages to fix most of these errors as they are assignments to a variable.</p>
+				</td>
+			</tr>
 
-<p><strong>Examples of a missing operator</strong></p>
+		</table>
 
-<p>Incorrect Code</p>
-<code><pre>
-if (productIsEven(int)(a*b)){  // Can be solved by putting an equals between productIsEven and assigning it a*b 
-overtimeHours = 2(normalHours);  // Can be solved by putting a multiplication between 2 and (normalHours)
-if ((age < 20)  (age <=40)) {  // Can be solved by putting a && or || after (age < 20)
-</pre></code>
+	</div>
 
-<p>Correct Code</p>
-<code><pre>
-if (productIsEven = (int)(a*b)){  
+
+	<div class="example">
+
+		<table>
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>if (productIsEven(int)(a*b)){  
+overtimeHours = 2(normalHours);
+if ((age < 20)  (age <=40)) {  </pre>
+				</td>
+				<td class="correctCode">
+<pre>if (productIsEven = (int)(a*b)){  
 overtimeHours = 2 * (normalHours);  
-if ((age < 20) || (age <=40)) {  
-</pre></code>
+if ((age < 20) || (age <=40)) {  </pre>
+				</td>
+				<td class="explanation">The first line can be solved by putting an equals between productIsEven and assigning it a*b. The second can be solved by putting a multiplication between 2 and (normalHours). The last can be can be solved by putting a && or || after (age < 20) </td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>

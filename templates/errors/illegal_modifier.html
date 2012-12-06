@@ -1,26 +1,49 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It appears that you are using an illegal modifier on one of your variables, most likely a privacy modifier.</p>
+	<p>It appears that you are using an illegal modifier on one of your variables, most likely a privacy modifier.</p>
 
-<p>As local variables are only able to be accessed from within the method, there is no need to add privacy modifiers to them.</p>
+	<p>As local variables are only able to be accessed from within the method, there is no need to add privacy modifiers to them.</p>
 
-<p>Remove these modifiers and then try run your code again.</p>
+	<p>Remove these modifiers and then try run your code again.</p>
 
 
-<p><strong>Example</strong></p>
+	<div class="example">
 
-<p>Incorrect Code</p>
-<code><pre>
-boolean productIsEven (int a, int b) {
-	public int product = a*b; // public modifier is illegal for a local variable
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td>
+<pre>boolean productIsEven (int a, int b) {
+	public int product = a*b; 
 	return (product%2 == 0);
-}
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-boolean productIsEven (int a, int b) {
+}</pre>
+				</td>
+				<td>
+<pre>boolean productIsEven (int a, int b) {
 	int product = a*b; // public modifier is removed
 	return (product%2 == 0);
-}
-</pre></code>
+}</pre>
+				</td>
+				<td>
+					<p>The public modifier is illegal for a local variable.</p>
+				</td>
+			</tr>	
+		</table>
+
+	</div>
+
+</div>
+
+
+
+		
+
+
+

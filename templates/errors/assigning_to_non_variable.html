@@ -1,5 +1,4 @@
 <div class="feedback">
-	<h3>It looks like your code was unable to compile. Let's take a look why...</h3>
 
 	<p>It appears that you are attempting to assign to something that is not a varible.</p>
 
@@ -10,20 +9,19 @@
 
 	<div class="example">
 
-		<h4>Example</h4>
-
 		<table>
 			<tr>
+				<th></th>
 				<th>Incorrect Code</th>
 				<th>Correct Code</th>
+				<th>Explanation</th>
 			</tr>	
 			<tr>
+				<td class="eHeader"><p>Example</p></td>
 				<td class="incorrectCode">
 <pre>String word = "programming";
 int position = 6;
 char replacement = 'z';
-/* word.charAt(position) is not a variable 
-	so we cannot assign to it */
 word.charAt(postion) = replacement;
 return word;</pre>
 				</td>
@@ -31,13 +29,12 @@ return word;</pre>
 <pre>String word = "programming";
 int position = 6;
 char replacement = 'z';
-// Break the word up into a char array
 char[] chars = word.toCharArray(); 
-/* Each element in the char array is a 
-	variable so we can assign to it */
 chars[6] = replacement; 
-// Turn the char array back to a string
 return String.valueOf(chars);</pre>
+				</td>
+				<td class="explanation">
+					<p>word.charAt(position) is not a variable so we cannot assign to it. To assign to a single character we need to break the word up into a char array. Each element in the char array is a variable so we can assign to it, then we turn it back into a string.</p>
 				</td>
 			</tr>
 

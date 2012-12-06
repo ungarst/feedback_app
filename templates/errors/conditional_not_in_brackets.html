@@ -1,26 +1,42 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It looks like you are forgetting to wrap your if condition in parenthesis.</p>
+	<p>It looks like you are forgetting to wrap your if condition in parenthesis.</p>
 
-<p>Java requires you do to this so it knows what to evaluate as the if condition, determining if it gets executed or not.</p>
+	<p>Java requires you do to this so it knows what to evaluate as the if condition, determining if the following code gets executed or not.</p>
 
-<p>Make sure that you have parenthesis around the conditions in your if statements and then try run your code again.</p>
+	<p>Make sure that you have parenthesis around the conditions in your if statements and then try run your code again.</p>
 
+	<div class="example">
 
-<p><strong>Example</strong></p>
+		<table>
 
-<p>Incorrect Code</p>
-<code><pre>
-int a = 10;
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Explanation</p></td>
+				<td class="incorrectCode">
+<pre>int a = 10;
 if a == 5 {
 	return true;
-}
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-int a = 10;
+}</pre>
+				</td>
+				<td>
+<pre>int a = 10;
 if (a == 5) {
 	return true;
-}
-</pre></code>
+}</pre>
+				</td>
+				<td>
+					<p>The boolean condition for the if statement (a==5) needs to be wrapped in brackets.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+	
+</div>
