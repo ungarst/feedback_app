@@ -1,27 +1,12 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It appears you included the method header with the code you submitted.</p>
+	<p>It looks like your code was unable to compile. Lets take a look why...</p>
 
-<p>When you submit your code, CodeWrite wraps what you write in a method header and puts it a class so that it can be tested.</p>
+	<p>It appears you included the method header with the code you submitted.</p>
 
-<p>Try removing the method header from the code you have written and submit again.</p>
+	<p>When you submit your code, CodeWrite wraps what you write in a method header and puts it a class so that it can be tested. This means that there will be two method headers for the one method header</p>
 
+	<p>Try removing the method header from the code you have written and submit again.</p>
 
-<p><strong>Example</strong></p>
+</div>
 
-<p>Say you are writing the method <code>boolean productIsEven (int a, int b)</code> and you submit the following solution</p>
-<code><pre>
-boolean productIsEven (int a, int b) {
-	return (a*b)%2 == 0;
-}
-</pre></code>
-<p>CodeWrite will wrap your code within the given method header before it compiles it, so the compiled code is:</p>
-<code><pre>
-boolean productIsEven (int a, int b) {
-	boolean productIsEven (int a, int b) {
-		return (a*b)%2 == 0;		
-	}
-}
-</pre></code>
-
-<p>Simply remove the method header and corresponding curly brackets from your code and try again.</p>

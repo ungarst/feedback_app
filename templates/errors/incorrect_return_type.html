@@ -1,86 +1,137 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It appears that the return statement(s) in your code are stopping it from compiling.</p>
+			
 
-<p>This error tends to be because you are either:</p>
-<ul>
-	<li>Missing a return statement completely.</li>
-	<li>Returning a variable that is of the wrong type.</li>
-	<li>Having return statements within a a block (e.g. an if statement) which is not guaranteed to be executed and no return statement at the end of the method.</li>
-</ul>
+			<p>It appears that the return statement(s) in your code are stopping it from compiling.</p>
 
-<p><strong>Example of missing a return statement</strong></p>
+			<p>This error tends to be because you are either:</p>
+			<ul>
+				<li>Missing a return statement completely.</li>
+				<li>Returning a variable that is of the wrong type.</li>
+				<li>Having return statements within a a block (e.g. an if statement) which is not guaranteed to be executed and not having a return statement at the end of the method.</li>
+			</ul>
 
-<p>Incorrect Code</p>
-<code><pre>
-public static int sum (int a, int b) {
-	int sum = a + b; // The sum is being calculated correctly, but is not being returned.
-}
-</pre></code>
+			
 
-<p>Correct Code</p>
-<code><pre>
-public static int sum (int a, int b) {
-	int sum = a + b; 
-	return sum; // The sum is being returned as required by the method header, and so will compile now
-}
-</pre></code>
+		<div class="example">
+			
 
-<p><strong>Example of returning a variable that is of the wrong type</strong></p>
 
-<p>Incorrect Code</p>
-<code><pre>
-public static String arraySum (int[] array)
+			<table>
+				<tr>
+					<th></th>
+					<th>Incorrect Code</th>
+					<th>Correct Code</th>
+					<th>Explanation</th>
+				</tr>
+				<tr>
+					<td class="eHeader"><p>Example</p></td>
+					<td class="incorrectCode">
+<pre>public int sum (int a, int b) {
+  <span style="background-color: #FFFFA3">int sum = a + b;</span> 
+}</pre>
+					</td>
+					<td class="correctCode">
+<pre>public int sum (int a, int b) {
+  int sum = a + b; 
+  <span style="background-color: #FFFFA3">return sum;</span> 
+}</pre>
+					</td>
+					<td class="explanation">
+						<p>The sum is being calculated correctly, but is not being returned. Returning the sum will allow allow the code to compile, as the method requires an int to be returned</p>
+					</td>
+
+				</tr>
+
+			</table>
+
+		</div>
+
+		<div class="example">
+			
+
+
+			<table>
+				<tr>
+					<th></th>
+					<th>Incorrect Code</th>
+					<th>Correct Code</th>
+					<th>Explanation</th>
+				</tr>
+				<tr>
+					<td class="eHeader"><p>Example</p></td>
+					<td class="incorrectCode">
+<pre>public String arraySum (int[] array)
 {
-	int sum = 0;
-	for (int i = 0 ; i < array.length ; i++)
-	{
-		sum += array[i];
-	}
-	return sum; // The method header says that we need to return a string, but sum is an integer
+  int sum = 0;
+  for (int i = 0 ; i < array.length ; i++)
+  {
+    sum += array[i];
+  }
+  <span style="background-color: #FFFFA3">return sum;</span> 
 	
-}
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-public static String arraySum (int[] array)
+}</pre>
+					</td>
+					<td class="correctCode">
+<pre>public String arraySum (int[] array)
 {
-	int sum = 0;
-	for (int i = 0 ; i < array.length ; i++)
-	{
-		sum += array[i];
-	}
-	return Integer.toString(sum); // We can convert sum to a string and return it, so the return type matches what is specified in the method header
-	
-}
-</pre></code>
+  int sum = 0;
+  for (int i = 0 ; i < array.length ; i++)
+  {
+    sum += array[i];
+  }
+  <span style="background-color: #FFFFA3">return Integer.toString(sum);</span>
+}</pre>
+					</td>
+					<td class="explanation">
+						<p>The method header says that we need to return a string, but sum is an integer. We can convert sum to a string and return it, so the return type matches what is specified in the method header </p>
+					</td>
 
-<p><strong>Example of having return statements within a a block</strong></p>
+				</tr>
 
-<p>Inorrect Code</p>
+			</table>
 
-<code><pre>
-public static int maxOfTwoNumbers (int a, int b)
+		</div>
+
+        <div class="example">
+            
+
+
+            <table>
+                <tr>
+                    <th></th>
+                    <th>Incorrect Code</th>
+                    <th>Correct Code</th>
+                    <th>Explanation</th>
+                </tr>
+                <tr>
+                    <td class="eHeader"><p>Example</p></td>
+                    <td class="incorrectCode">
+<pre>public int maxOfTwoNumbers (int a, int b)
 {
-	if (a >= b) {
-		return a;
-	}
-	// If the above condition doesn't return true then the method won't return an int like it should
-}
-</pre></code>
-
-<p>Correct Code</p>
-
-<code><pre>
-public static int maxOfTwoNumbers (int a, int b)
+  if (a >= b) {
+    return a;
+  }
+}</pre>
+                    </td>
+                    <td class="correctCode">
+<pre>public int maxOfTwoNumbers (int a, int b)
 {
-	if (a >= b) {
-		return a;
-	}
-	return b; // Adding this line at the end ensures that the method will always return an int regardless of conditions returning true
-}
-</pre></code>
+  if (a >= b) {
+    return a;
+  }
+  <span style="background-color: #FFFFA3">return b;</span>
+}</pre>
+                    </td>
+                    <td class="explanation">
+                        <p>If the if condition doesn't return true then the method won't return an int like it should.  Adding the return statement at the end ensures that the method will always return an int regardless of the if condition.</p>
+                    </td>
+
+                </tr>
+
+            </table>
+
+        </div>
 
 
-
+</div>

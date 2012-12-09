@@ -1,32 +1,52 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>Looking at your code and the error that Java found, it appears that you are are performing a comparison using a single equals sign.</p>
+	<p>Looking at your code and the error that Java found, it appears that you are are performing a comparison using a single equals sign.</p>
 
-<p>Remember, if you want to test if two things are equal you need to use two equals signs.</p>
+	<p>Remember, if you want to test if two things are equal you need to use two equals signs.</p>
 
-<p>One equals sign assigns the value on the right to the variable on the left.</p>
+	<p>One equals sign assigns the value on the right to the variable on the left.</p>
 
+	<div class="example">
 
-<p><strong>Example</strong></p>
+		<table>
 
-<p>Incorrect Code</p>
-<code><pre>
-int a = 10;
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int a = 10;
 int b = 8;
-if (a = b) { // This line assigns the value of b to a, and resolves to an int not a boolean. If we want to compare them we need to use two equals signs.
+if (a = b) { 
 	return true;
 } else {
 	return false;
-}
-</pre></code> 
-
-<p>Correct Code</p>
-<code><pre>
-int a = 10;
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>int a = 10;
 int b = 8;
-if (a == b) { // This line assigns the value of b to a, and resolves to an int not a boolean. If we want to compare them we need to use two equals signs.
+if (a == b) { signs.
 	return true;
 } else {
 	return false;
-}
-</pre></code> 
+}</pre> 
+				</td>
+				<td class="explanation">
+					<p>The statement within the if statements brackets assigns the value of b to a, and resolves to an int not a boolean. If we want to compare them we need to use two equals signs.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>
+
+
+
+

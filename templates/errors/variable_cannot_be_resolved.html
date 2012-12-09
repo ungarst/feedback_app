@@ -1,44 +1,74 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
 <p>It appears one of your varibles cannot be found by Java as it attempted to build your program.</p>
 
 <p>Remember, you always need to declare your varible before you try to assign to it so Java knows what type of variable it is dealing with.</p>
 
-<p><strong>Example</strong></p>
+	<div class="example">
 
-<p>Incorrect Code</p>
-<code><pre>
-// a has a value assigned to it, but has never specified what type of variable it is
-a = 5;
-</pre></code>
+		<table>
 
-<p>Correct code</p>
-<code><pre>
-// a is declared to be an integer, and then has the value 5 assigned to it	
-int a = 5;
-</pre></code>
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>a = 5;</pre>
+				</td>
+				<td class="correctCode">
+<pre>int a = 5;</pre>
+				</td>
+				<td class="explanation">
+					<p>a has a value assigned to it, but has never specified what type of variable it is</p>
+				</td>
+			</tr>
 
-<p>Also, remember to be careful of the scope of you variables.</p>
-<p>If your variable is defined within a block of code, it will only be accessible within that block.</p>
-<p>If you want to access your variable outside of that block, then you will need to define it before the block.</p>
+		</table>
 
-<p><strong>Example</strong></p>
+	</div>
 
-<p>Incorrect Code</p>
-<code><pre>
-int x = 10;
+	<p>Also, remember to be careful of the scope of you variables.</p>
+	<p>If your variable is defined within a block of code, it will only be accessible within that block.</p>
+	<p>If you want to access your variable outside of that block, then you will need to define it before the block.</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int x = 10;
 if (x > 5) {
 	int y = x + 4;
 }
-System.out.println(y); // y cannot be found, as it only existed within the if statement
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-int x = 10;
+System.out.println(y); </pre>
+				</td>
+				<td class="correctCode">
+<pre>int x = 10;
 int y = 0;
 if (x > 5) {
 	y = x + 4;
 }
-System.out.println(y); // y was declared before the if statement, and so can be accessed after it
-</pre></code>
+System.out.println(y);</pre>
+				</td>
+				<td class="explanation">
+					<p>y cannot be found, as it only existed within the if statement. By declaring y before the if statement it can be accessed after it.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>

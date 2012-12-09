@@ -1,27 +1,47 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It appears your code is generating an OnlySynchronized error. This is generally due to a syntax error in an if statement.</p>
+	<p>It looks like your code was unable to compile. Lets take a look why...</p>
 
-<p>If you want to combine booleans in an if statement using <code>&&</code> or <code>||</code> then you need to make sure that the entire conditional is wrapped in brackets, as well as each individual boolean condition if you choose to put them in brackets.</p>
+	<p>It appears your code is generating an OnlySynchronized error. This is generally due to a syntax error in an if statement.</p>
 
-<p><strong>Example</strong></p>
+	<p>If you want to combine booleans in an if statement using <code>&&</code> or <code>||</code> then you need to make sure that the entire conditional is wrapped in brackets, as well as each individual boolean condition if you choose to put them in brackets.</p>
 
-<p>Incorrect Code</p>
-<code><pre>
-double items = 9.4;
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>double items = 9.4;
 int a = 6;
 
 if (items >10) && (a == 0) {
 	return true;
-}
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-double items = 9.4;
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>double items = 9.4;
 int a = 6;
 
 if ((items >10) && (a == 0)) {
 	return true;
-}
-</pre></code>
+}</pre>
+				</td>
+				<td class="explanation">
+					<p>The condition in an if statement needs to be enclosed in parenthesis. Even if this condition is made up of the combination of other conditions the entire thing still needs to be wrapped in parenthesis</p>
+				</td>
+			</tr>
+
+		</table>	
+
+	</div>
+
+</div>
+

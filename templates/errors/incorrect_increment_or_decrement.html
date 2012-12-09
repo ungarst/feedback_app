@@ -1,26 +1,43 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It appears you are using the increment or decrement operation incorrectly, which is causing your code to not compile.</p>
+	<p>It appears you are using the increment or decrement operation incorrectly, which is causing your code to not compile.</p>
 
-<p>Let's review the correct usage of the increment and decrement operations and see if it can help you find your mistake.</p>
+	<p>Let's review the correct usage of the increment and decrement operations and see if it can help you find your mistake.</p>
 
-<p>The increment operator is used to increase the value of a variable by one and the decrement operator is used to decrease the value of a variable by one.</p>
+	<p>The increment operator is used to increase the value of a variable by one and the decrement operator is used to decrease the value of a variable by one.</p>
 
-<p>The variable must be either an integer or a double, and it's value must be set before you can increment it or decrement it.</p>
+	<p>The variable must be either an integer or a double, and it's value must be set before you can increment it or decrement it.</p>
 
-<p><strong>Example</strong></p>
+	<div class="example">
 
-<p>Incorrect Code</p>
-<code><pre>
-String s = "Programming";
-s++; // Strings cannot be incremented
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>String s = "Programming";
+s++; 
 
 int i;
-i++; // i needs to be initialised before it can be incremented
-</pre></code>
+i++; // i needs to be initialised before it can be incremented</pre>
+				</td>
+				<td class="correctCode">
+<pre>int i = 0;
+i++;</pre>
+				</td>
+				<td class="explanation">
+					<p>Strings cannot be incremented, and so s++ will stop the code from compiling. Variables need to be initialised before they can incremented or decremented, which is why i++ is incorrect.</p>
+				</td>
+			</tr>
 
-<p>Correct Code</p>
-<code><pre>
-int i = 0;
-i++;
-</pre></code>
+		</table>
+
+	</div>
+
+</div>

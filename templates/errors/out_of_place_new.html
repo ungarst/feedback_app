@@ -1,30 +1,46 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It appears that you are misusing the <code>new</code> keyword. The new keyword is reserved for the construction of new objects.</p>
+	<p>It appears that you are misusing the <code>new</code> keyword. The new keyword is reserved for the construction of new objects.</p>
 
-<p>If you are attempting to call one of your variables new then this is most likely where this error is coming from.</p>
+	<p>If you are attempting to call one of your variables new then this is most likely where this error is coming from.</p>
 
-<p>If you are not trying to call a variable new then you are attempting to construct an object incorrectly.</p>
+	<p>If you are not trying to call a variable new then you are attempting to construct an object incorrectly.</p>
 
-<p>Object construction is done by calling <code>new ObjectType (parameters)</code> and the object must be assigned to a variable or used in a method call. If the object's constructor doesn't take any parameters then you still need to include empty parenthesis.</p>
+	<p>Object construction is done by calling <code>new ObjectType (parameters)</code> and the object must be assigned to a variable or used in a method call. If the object's constructor doesn't take any parameters then you still need to include empty parenthesis.</p>
 
+	<div class="example">
 
-<p><strong>Example</strong></p>
+		<table>
 
-<p>Incorrect Code</p>
-<code><pre>
-int new = 10; // Cannot call a variable 'new'
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int new = 10; 
 
-new String first = itemsString.charAt(0); // We don't need to put 'new' before the object type on the left hand side of the assignment
+new char first = itemsString.charAt(0);
 
-String part = new String; // Need to include the parameters to the objects constructor.
-</pre></code>
+String part = new String; </pre>
+				</td>
+				<td class="correctCode">
+<pre>int newVariable = 10;
 
-<p>Correct Code</p>
-<code><pre>
-int newVariable = 10; // Changed variable name from new
+char first = itemsString.charAt(0);
 
-String part = new String (); // Include empty parenthesis as constructor takes no arguments.
+String part = new String (); </pre>
+				</td>
+				<td class="explanation">
+					<p>The first misuse of new is because we cannot call a variable 'new'. </br>When declaring the variable 'first' we don't need to put 'new' before the object type on the left hand side of the assignment. </br>When creating objects we need to include the parameters to the objects constructor.</p>
+				</td>
+			</tr>
 
-String first = itemsString.charAt(0); // Remove 'new' before the object type on the left hand side of the assignment
-</pre></code>
+		</table>
+
+	</div>
+
+</div>

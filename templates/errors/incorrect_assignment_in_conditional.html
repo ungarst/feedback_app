@@ -1,32 +1,48 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It appears that you are incorrectly assigning to a variable in on of your if statements.</p>
+	<p>It appears that you are incorrectly assigning to a variable in one of your if statements.</p>
 
-<p>Assignment in if statements must happen before the value of the variable is used in a comparison. Most of these kind of errors occure when people forget to put the assignment first or put their brackets in the wrong place (see example below).</p>
+	<p>Assignment in if statements must happen before the value of the variable is used in a comparison. Most of these kind of errors occure when people forget to put the assignment first or put their brackets in the wrong place (see example below).</p>
 
-<p>Ensure that you have your assignment and comparisons in the right order and your brackets are correct, then try run your code again.</p>
+	<p>Ensure that you have your assignment and comparisons in the right order and your brackets are correct, then try run your code again.</p>
 
+	<div class="example">
 
-<p><strong>Example</strong></p>
+		<table>
 
-<p>Incorrect Code</p>
-<code><pre>
-String word = "10";
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>String word = "10";
 int x;
 if ((x = Integer.parseInt)(word < 3)) {
 	return true;
 } else {
 	return false;
-}
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-String word = "10";
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>String word = "10";
 int x;
 if ((x = Integer.parseInt(word)) < 3) {
 	return true;
 } else {
 	return false;
-}
-</pre></code>
+}</pre>
+				</td>
+				<td class="explanation">
+					<p>Integer.parseInt(String s) takes in a word and converts it to an integer. We need to re arrange the braces so we are correctly assigning to a variable, and then we can compare the value of the variable.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>

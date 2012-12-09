@@ -1,31 +1,54 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It looks like you are using an illegal operator in your if statements.</p>
-<p>Operations in if statements that are counted as illegal include</p>
-<ul>
+	<p>It looks like you are using an illegal operator in your if statements.</p>
+	<p>Operations in if statements that are counted as illegal include</p>
+	<ul>
 
-			<li>=! - The exclamation mark should be before the equals sign</li>
-			<li>=> - The greater than sign should come before the equals sign</li>
-			<li>=< - The less than sign should come before the equals sign</li>
-			<li><< - This is the left bitwise shift, not much less than</li>
-			<li>>> - This is the right bitwise shift, not much greater than</li>
-			<li>\\ - Remember, if you are trying to have your if based on one condition OR an other, you need to use ||</li>
-</ul>
+				<li>=! - The exclamation mark should be before the equals sign</li>
+				<li>=> - The greater than sign should come before the equals sign</li>
+				<li>=< - The less than sign should come before the equals sign</li>
+				<li><< - This is the left bitwise shift, not much less than</li>
+				<li>>> - This is the right bitwise shift, not much greater than</li>
+				<li>\\ - Remember, if you are trying to have your if based on one condition OR an other, you need to use ||</li>
+	</ul>
 
-<p><strong>Example</strong></p>
+	<div class="example">
 
-<p>Incorrect Code</p>
-<code><pre>
-int x = 5;
-if (x =< 10) { // Less than and equals signs are around the wrong way
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int x = 5;
+if (x =< 10) { 
 	x = 10;
-}
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-int x = 5;
-if (x <= 10) { // Correct order of less than and equals signs
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>int x = 5;
+if (x <= 10) { 
 	x = 10;
-}
-</pre></code>
+}</pre>
+				</td>
+				<td class="explanation">
+					<p> The less than and equals signs are around the wrong way. By correcting their order the code can now compile.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>
+
+	
+
+
+
+

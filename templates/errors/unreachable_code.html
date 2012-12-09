@@ -1,48 +1,52 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
 <p>Apparently some of the code that you have written is unreachable, and so won't compile. What a waste...</p>
 <p>Unreachable code is when some of the code that you wrote can never be executed because there is no path that leads to it.</p>
 <p>This is generally when you have code following a return statement within a block (e.g. an if statement)</p>
 
-<p>The best way to fix this is to either delete all the code that follows the return statement or move those lines above the return statment</p>
+<p>The best way to fix this is to move the lines that follow the return statement above the return statment</p>
 
-<p><strong>Example</strong></p>
+	<div class="example">
 
-<p>Incorrect Code</p>
-<code><pre>
-int a = 5;
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int a = 5;
 int b = 10;
 
 if (a > b) {
 	return false;
-	a += b; // This line can never be executed as the method returns before it is reached
+	a += b; 
 }
 
-return true;
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-int a = 5;
+return true;</pre>
+				</td>
+				<td class="correctCode">
+<pre>int a = 5;
 int b = 10;
 
 if (a > b) {
-	return false; // The lines following the return statement
-}
-
-return true;
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-int a = 5;
-int b = 10;
-
-if (a > b) {
-	a += b; // This line is now above the return and so will be executed before the method returns
+	a += b;
 	return false;
 }
 
-return true;
-</pre></code>
+return true;</pre>
+				</td>
+				<td class="explanation">
+					<p>The <code>a += b</code> line can never be executed as the method returns before it is reached. By moving it above the return statement then the line will be executed before the method returns.</p>
+				</td>
+			</tr>
 
+		</table>
+
+	</div>
+
+</div>

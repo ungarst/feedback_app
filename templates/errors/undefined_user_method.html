@@ -1,74 +1,127 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It appears you are trying to call a method that doesn't exist. Let's see if we can fix this...</p>
+	<p>It appears you are trying to call a method that doesn't exist. Let's see if we can fix this...</p>
 
-<p>Remember we are only writing a single method, so if we are going to be calling methods then they will be a:</p>
-<ul>
-	<li>Static method from a library class (e.g. java.lang.Math)</li>
-	<li>A method on a variable that we have defined in the method we are writing</li>
-</ul>
-<p>If we want to call a method on this variable, then we do it using <code>variableName.methodName(parameters)</code></p>
+	<p>Remember we are only writing a single method, so if we are going to be calling methods then they will be a:</p>
+	<ul>
+		<li>Static method from a library class (e.g. java.lang.Math)</li>
+		<li>A method on a variable that we have defined in the method we are writing</li>
+	</ul>
+	<p>If we want to call a method on this variable, then we do it using <code>variableName.methodName(parameters)</code></p>
 
-<p>This error is also caused by misspelling Java keywords that are followed by parenthesis</p>
+	<p>This error is also caused by misspelling Java keywords that are followed by parenthesis</p>
 
-<p><strong>Example of calling a static method</strong></p>
 
-<p>Incorrect Code</p>
-<code><pre>
-int a = 5; 
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int a = 5; 
 int b = 12;
-int c = max(a,b); // max is in the Math package so we need to prefix it with the package name
-</pre></code>
-
-<p>Correct Code</p>
-<code><pre>
-int a = 5; 
+int c = max(a,b);</pre>
+				</td>
+				<td class="correctCode">
+<pre>int a = 5; 
 int b = 12;
-int c = Math.max(a,b); // max is in the Math package so we need prefixed it with the package name
-</pre></code>
+int c = Math.max(a,b);</pre>
+				</td>
+				<td class="explanation">
+					<p>max is in the Math package so we need prefixed it with the package name</p>
+				</td>
+			</tr>
 
+		</table>
 
-<p><strong>Example of calling a method on a variable</strong></p>
+	</div>
 
-<p>Incorrect Code</p>
-<code><pre>
-String s = "Java is awesome!!"
-char c = charAt(s, 1); // Trying to get the character at index 1 of the string
-</pre></code>
+	<div class="example">
 
-<p>Correct Code</p>
-<code><pre>
-String s = "Java is awesome!!";
-char c = s.charAt(1); // charAt is a String method so we call it on the String s
-</pre></code>
+		<table>
 
-<p><strong>Example of a misspelt Java keyword</strong></p>
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>String s = "Java is awesome!!"
+char c = charAt(s, 1);</pre>
+				</td>
+				<td class="correctCode">
+<pre>String s = "Java is awesome!!";
+char c = s.charAt(1);</pre>
+				</td>
+				<td class="explanation">
+					<p>charAt is a String method so we call it on the String s</p>
+				</td>
+			</tr>
 
-<p>Incorrect Code</p>
-<code><pre>
-int x = 10;
+		</table>
+
+	</div>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int x = 10;
 boolean b;
-If (x > 5) { // if is spelt with a capital 'I'
+If (x > 5) {
 	b = true;
-} elseif (x == 5) { // There is no space between "else" and "if"
+} elseif (x == 5) { 
 	b = true;
 	x = 5;
 } else {
 	b = false;
-}
-</pre></code>
-
-
-<p>Correct Code</p>
-<code><pre>
-int x = 10;
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>int x = 10;
 boolean b;
-if (x > 5) { // The capital 'I' is now lower case
+if (x > 5) { 
 	b = true;
-} else if (x == 5) { // There is now a space between "else" and "if"
+} else if (x == 5) { 
 	b = true;
 	x = 5;
 } else {
 	b = false;
-}
-</pre></code>
+}</pre>
+				</td>
+				<td class="explanation">
+					<p>if is spelt with a capital 'I' when it should be lower case and there is no space between "else" and "if"</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>
+
+
+
+
+
+

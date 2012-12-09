@@ -1,20 +1,37 @@
-<p>It looks like your code was unable to compile. Lets take a look why...</p>
+<div class="feedback">
 
-<p>It appears that you tried to invoke a method on an object that the object didn't have.</p>
+	<p>It appears that you tried to invoke a method on an object that the object didn't have.</p>
 
-<p>Check the Java API to make sure that the method you are calling exists for that type of object and then try run your code again.</p>
+	<p>Check the Java API to make sure that the method you are calling exists for that type of object and then try run your code again.</p>
 
+	<div class="example">
 
-<p><strong>Example</strong></p>
+		<table>
 
-<p>Incorrect Code</p>
-<code><pre>
-char c = 'b';
-char d = c.charAt(0); // The method charAt(int index) doesn't exist for type character
-</pre></code>
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eheader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>char c = 'b';
+char d = c.charAt(0);</pre>
+				</td>
+				<td class="correctCode">
+<pre>String c = "b";
+char d = c.charAt(0);</pre>
+				</td>
+				<td class="explanation">
+					<p>The method charAt(int index) doesn't exist for type char but it does for Strings</p>
+				</td>
+			</tr>
 
-<p>Correct Code</p>
-<code><pre>
-String c = "b";
-char d = c.charAt(0); // The method charAt(int index) exists for type String
-</pre></code>
+		</table>
+
+	</div>
+	
+
+</div>
