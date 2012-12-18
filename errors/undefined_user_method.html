@@ -1,0 +1,126 @@
+<div class="feedback">
+
+	<p>It appears you are trying to call a method that doesn't exist.</p>
+
+
+	<p>Let's see if we can fix this... there are two different kinds of methods that you can call from the code you are writing for this exercise:</p>
+	<ul>
+		<li>static methods from a library class (e.g. Math.max(), Integer.parseInt())</li>
+		<li>instance methods that are called on variables you have defined in the method you are writing (e.g. variableName.methodName(parameters))</li>
+	</ul>
+	
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int a = 5; 
+int b = 12;
+int c = max(a,b);</pre>
+				</td>
+				<td class="correctCode">
+<pre>int a = 5; 
+int b = 12;
+int c = Math.max(a,b);</pre>
+				</td>
+				<td class="explanation">
+					<p>max is in the Math package so we need prefixed it with the package name</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>String s = "Java is awesome!!"
+char c = charAt(s, 1);</pre>
+				</td>
+				<td class="correctCode">
+<pre>String s = "Java is awesome!!";
+char c = s.charAt(1);</pre>
+				</td>
+				<td class="explanation">
+					<p>charAt is a String method so we call it on the String s</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+	<p>Also note that this error can be caused by misspelling Java keywords that are followed by parentheses.  For example, if you are trying to write an “if” statement but spell it “is” (e.g. is (condition)) Java will think this looks like a method call, but the “is” method does not exist!</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int x = 10;
+boolean b;
+If (x > 5) {
+	b = true;
+} elseif (x == 5) { 
+	b = true;
+	x = 5;
+} else {
+	b = false;
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>int x = 10;
+boolean b;
+if (x > 5) { 
+	b = true;
+} else if (x == 5) { 
+	b = true;
+	x = 5;
+} else {
+	b = false;
+}</pre>
+				</td>
+				<td class="explanation">
+					<p>if is spelt with a capital 'I' when it should be lower case and there is no space between "else" and "if"</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>
+
+
+
+
+
+

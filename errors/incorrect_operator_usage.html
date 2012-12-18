@@ -1,0 +1,49 @@
+<div class="feedback">
+
+	<p>It appears you tried to use one of the basic operators (+, -, *, /,  or %) on a type which it is not allowed.</p>
+
+	<p style="font-family: courier; font-size: 120%; color: #000;">
+		<span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+		<LINE>
+		</span>
+	</p>
+
+	<p>Most types other than int and double don't support these operations so you will have to define the logic for them yourself.</p>
+
+	<p>Make sure that you are not using these operators on types for which they aren't defined and then try run your code again.</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>String a = “hello”;
+String b = “o”;
+
+String c = a – b;</pre>
+				</td>
+				<td class="correctCode">
+<pre>String a = “hello”;
+String b = “o”;
+
+String c = a.substring(0, 4);</pre>
+				</td>
+				<td class="explanation">
+					<p>The subtraction operator is not defined for Strings. You will need to define your own logic for removing part of a string like in the correct code.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>
+

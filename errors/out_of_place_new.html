@@ -1,0 +1,44 @@
+<div class="feedback">
+
+	<p>It appears that you are misusing the <code>new</code> keyword. The new keyword is reserved for the construction of new objects.</p>
+
+	<p style="font-family: courier; font-size: 120%; color: #000;">
+		<span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+		<LINE>
+		</span>
+	</p>
+
+	<p>Object construction is done by calling <code>new ObjectType (parameters)</code> and the object must be assigned to a variable or used in a method call. If the object's constructor doesn't take any parameters then you still need to include empty parenthesis.</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>new char first = itemsString.charAt(0);
+
+String part = new String; </pre>
+				</td>
+				<td class="correctCode">
+<pre>char first = itemsString.charAt(0);
+
+String part = new String (); </pre>
+				</td>
+				<td class="explanation">
+					<p>When declaring the variable 'first' we don't need to put 'new' before the object type on the left hand side of the assignment. </br>When creating objects we need to include the parameters to the objects constructor.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>

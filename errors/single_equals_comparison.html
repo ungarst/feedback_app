@@ -1,0 +1,52 @@
+<div class="feedback">
+
+	<p>Looking at your code and the error that Java found, it appears that you are are performing a comparison using a single equals sign.</p>
+
+	<p>Remember, if you want to test if two things are equal you need to use two equals signs.</p>
+
+	<p>One equals sign assigns the value on the right to the variable on the left.</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int a = 10;
+int b = 8;
+if (a = b) { 
+	return true;
+} else {
+	return false;
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>int a = 10;
+int b = 8;
+if (a == b) { 
+	return true;
+} else {
+	return false;
+}</pre> 
+				</td>
+				<td class="explanation">
+					<p>The statement within the if statements brackets assigns the value of b to a. If we want to compare them we need to use two equals signs (the comparison operator).</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>
+
+
+
+

@@ -1,0 +1,49 @@
+<div class="feedback">
+
+	<p>It appears you are incorrectly using one or more of the following operators in your code:</p>
+	<ul>
+		<li>&&</li>
+		<li>||</li>
+		<li>!</li>
+	</ul>
+
+	<p>Both the && operator and the || operator can only appear between two boolean values.  The ! operator can only appear to the left of a boolean value.</p>
+	
+	<p>Most occurrences of this error are caused by incorrectly formed boolean expressions (for example, in the condition of an if statement).</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>double items = 100.0/9.0;
+
+if (items <= 10 && !0) { 
+	return false;
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>double items = 100.0/9.0;
+
+if (items <= 10 && items != 0) { 
+	return false;
+}</pre>
+				</td>
+				<td class="explanation">
+					<p>The code on the left is incorrect because the ! operator can only appear to the left of an expression of boolean type (but 0 is of type int).   In addition, the && operator can only appear between two expressions of type Boolean.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>

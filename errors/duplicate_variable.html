@@ -1,0 +1,79 @@
+<div class="feedback">
+
+	<p>It seems like you are trying to create two variables with the same name in your method.</p>
+
+	<p style="font-family: courier; font-size: 120%; color: #000;">
+		<span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+		<LINE>
+		</span>
+	</p>
+
+	<p>Remember, once you have declared a variable (i.e. defined its type and name) you can assign to it in multiple places.</p>
+
+	<div class="example">
+
+		<table>
+
+ 			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int a = 5;
+...
+<span style="background-color: #FFFFA3">int a = 10;</span></pre>
+				</td>
+				<td class="correctCode">
+<pre>int a = 5;
+...
+<span style="background-color: #FFFFA3">a = 10;</span></pre>
+				</td>
+				<td class="explanation">
+					<p>The first line declares the variable a (and initialises its value to 5).  We should not declare the variable again if we want to assign a new value to it.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+	<p>This error will also occur if you try to declare any variables with the same name as the inputs to the method you are writing.  The input variables have already been declared and store the values given to them when the method was called.</p>
+
+
+	<div class="example">
+
+
+		<table>
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>public static int sum (int a, int b) {
+	<span style="background-color: #FFFFA3">int a, b;</span>
+	return a + b;
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>public static int sum (int a, int b) {
+	return a + b; 
+}</pre>
+				</td>
+				<td class="explanation">
+					<p>Variables a and b are inputs to the method, and are declared in the method header.  We can’t re-declare these variables in the method body.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>

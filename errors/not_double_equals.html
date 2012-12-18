@@ -1,0 +1,50 @@
+<div class="feedback">
+
+	<p>It appears one of your if statements isn't written properly.</p>
+	<p>When we try to compare two things in an if statement, we need to use two equals signs.</p>
+	<p>Remember:</p>
+	<ul>
+		<li>One equals sign is for assigning a value to a variable e.g. int x = 10</li>
+		<li>Two equals signs are for comparing two things e.g. x == 10</li>
+	</ul>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int x = 5;
+int y = 13;
+if ((x*y)%2 = 0) {
+	return true;
+} else {
+	return false;
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>int x = 5;
+int y = 13;
+if ((x*y)%2 == 0) {
+	return true;
+} else {
+	return false;
+}</pre>
+				</td>
+				<td class="explanation">
+					<p>In the code on the left, a single equals sign appears in the condition for the if statement.  This is incorrect, because a single equals sign is the assignment operator.  To compare two values we must use two equals signs (==) which is the comparison operator, as shown on the left.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>

@@ -1,0 +1,55 @@
+<div class="feedback">
+
+	<p>It appears one of your variables is being accessed without being initialized.</p>
+
+	<p style="font-family: courier; font-size: 120%; color: #000;">
+		<span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+		<LINE>
+		</span>
+	</p>
+
+	<p>This is generally a result of declaring a variable without giving it an initial value and then trying to access its value later on.</p>
+
+	<p>Common occurences of this error are:</p>
+	<ul>
+		<li>Using a for-loop to generate the sum of an array, but not setting the sum variable to zero before the for-loop (see below).</li>
+		<li>Using a while-loop, but forgetting to set the iterating variable.</li>
+	</ul>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int[] a = {4, 64, 92, 13, 9};
+int sum;
+for (int i = 0; i < a.length; i++) {
+	sum += a[i]; 
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>int[] a = {4, 64, 92, 13, 9};
+int sum = 0; 
+for (int i = 0; i < a.length; i++) {
+	sum += a[i];
+}</pre>
+				</td>
+				<td class="explanation">
+					<p>We cannot add a[i] to sum as we never specified what sum was. By initializing sum to be 0 before the for loop we can add to it in the for loop.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>
+

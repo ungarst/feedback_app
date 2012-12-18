@@ -1,0 +1,59 @@
+<div class="feedback">
+
+<p>Apparently some of the code that you have written is unreachable, and so won't compile. What a waste! The first line of unreachable code is:</p>
+
+<p style="font-family: courier; font-size: 120%; color: #000;">
+	<span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+	<LINE>
+	</span>
+</p>
+
+<p>Unreachable code is when some of the code that you wrote can never be executed because there is no path that leads to it.</p>
+<p>This is generally when you have code following a return statement within a block (e.g. an if statement)</p>
+
+
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int a = 5;
+int b = 10;
+
+if (a > b) {
+	return false;
+	a += b; 
+}
+
+return true;</pre>
+				</td>
+				<td class="correctCode">
+<pre>int a = 5;
+int b = 10;
+
+if (a > b) {
+	a += b;
+	return false;
+}
+
+return true;</pre>
+				</td>
+				<td class="explanation">
+					<p>The <code>a += b</code> line can never be executed as the method returns before it is reached. By moving it above the return statement then the line will be executed before the method returns.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>

@@ -1,0 +1,46 @@
+<div class="feedback">
+
+	<p>It appears that you are attempting to use square brackets on a variable that is not an array.</p>
+
+	<p style="font-family: courier; font-size: 120%; color: #000;">
+		<span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+		<LINE>
+		</span>
+	</p>
+
+	<p>Square braces are used for accessing array elements, and so can only be used on variables that have been declared as arrays.</p>
+
+	<ul>
+		<li>Many people encounter this error when trying to look at a single character from a String.</li>
+		<li>If you want to access a single character from a string in Java, use the .charAt(int index) method.</li>
+	</ul>
+
+	<div class="example">
+
+
+		<table>
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>String s = "I love using CodeWrite";
+char secondCharacter = s[1];</pre>
+				</td>
+				<td class="correctCode">
+<pre>String s = "I love using CodeWrite";
+char secondCharacter = s.charAt(1); </pre>
+				</td>
+				<td class="explanation">
+					<p>The incorrect code is trying to access the second character incorrectly using array style accessing. In this case, the .charAt(int index) method should be used instead.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+</div>

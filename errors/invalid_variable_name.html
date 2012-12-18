@@ -1,0 +1,53 @@
+<div class="feedback">
+
+	<p>It appears you have broken the Java naming conventions.</p>
+
+	<p style="font-family: courier; font-size: 120%; color: #000;">
+		<span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+		<LINE>
+		</span>
+	</p>
+
+	<p>The full Java naming conventions can be found in the <a href="http://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html" target="_blank">Java Tutorials</a> but we've included a brief summary of them below which should help you solve your problem.</p>
+
+	<ul>
+		<li>Variable names are case-sensitive.</li>
+		<li>Variable names can contain letters, numbers and underscores.</li>
+		<li>Variable names must begin with a letter.</li>
+		<li>Variable names must not be one of the Java keywords (e.g. int, new)</li>
+	</ul>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int new = 10; 
+String char = "c"; 
+
+double 2ndNumber = 4.9;</pre>
+				</td>
+				<td class="correctCode">
+<pre>int newVariable = 10;
+String character = "c";
+
+double secondNumber = 4.9;</pre>
+				</td>
+				<td class="explanation">
+					<p>new and char are both keywords and so cannot be used as variable names. 2ndnumber is invalid as variable names cannot start with a number</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>

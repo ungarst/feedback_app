@@ -1,0 +1,81 @@
+<div class="feedback">
+
+<p>It looks like you are trying to use a variable somewhere in your code without first having declared the variable.</p>
+
+<p style="font-family: courier; font-size: 120%; color: #000;">
+	<span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+	<LINE>
+	</span>
+</p>
+
+<p>Remember, every variable must first be declared (i.e. where you specify the type of the variable and give it a name) before you try to use it or assign it a value.  This is so that Java can check you are using the variable in the correct way based on its type.</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>a = 5;</pre>
+				</td>
+				<td class="correctCode">
+<pre>int a = 5;</pre>
+				</td>
+				<td class="explanation">
+					<p>a has a value assigned to it, but has never specified what type of variable it is</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+	<p>Also, remember to be careful of the scope of your variables.</p>
+	<p>If your variable is declared within a block of code (e.g. inside the body of an if statement), then it will only be accessible within that block.</p>
+	<p>If you want to access your variable outside of that block, then you will need to declare it before the block.</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int x = 10;
+if (x > 5) {
+	int y;
+	y = x + 4;
+}
+System.out.println(y); </pre>
+				</td>
+				<td class="correctCode">
+<pre>int x = 10;
+int y;
+if (x > 5) {
+	y = x + 4;
+}
+System.out.println(y);</pre>
+				</td>
+				<td class="explanation">
+					<p>In the code on the left, the variable y cannot be printed in the last statement as it is only accessible within the body of the if statement.  The scope can be changed, and this problem corrected, but declaring y before the if statement.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>

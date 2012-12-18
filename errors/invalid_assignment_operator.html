@@ -1,0 +1,41 @@
+<div class="feedback">
+
+	<p>It appears that there is an error with the way you are assigning values.</p>
+
+	<p>Remember, assignment to a variable follows the form</p>
+	<ul>
+		<li><code>variableType variableName = value;</code> if you haven't already declared the variable.</li>
+		<li><code>variableName = value;</code> if you have already declared the variable type.</li>
+	</ul>	
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int hours = 0;
+hours + 10;</pre>
+				</td>
+				<td class="correctCode">
+<pre>int hours = 0;
+hours = hours + 10;</pre>
+				</td>
+				<td class="explanation">
+					<p>In the code on the left, the statement “hours + 10” is incorrect as there is no assignment operator (i.e. equals sign). This expression would be evaluated, but the result is not stored anywhere.  Changing this to “hours = hours + 10” means the value of the expression is stored in the variable “hours”, replacing the old value. </p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>
+

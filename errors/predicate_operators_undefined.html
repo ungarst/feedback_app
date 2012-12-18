@@ -1,0 +1,46 @@
+<div class="feedback">
+
+<p>It appears that you are attempting to compare two different types.</p>
+
+<p>Comparisons can only be made between things which are the same type e.g. comparing ints with ints or booleans with booleans.</p>
+
+<p>Have look through your code at all instances of ==, !=, <=, >= and make sure that they are only been used to compare things of the same type.</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>boolean b = false;
+boolean c = false;
+double d = 10.5;
+if (b == d) { 
+	return true;
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>boolean b = false;
+boolean c = false;
+double d = 10.5;
+if (b == c) { 
+	return true;
+}</pre>
+				</td>
+				<td class="explanation">
+					<p>We cannot compare b and d as they are not the same type</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+	
+</div>

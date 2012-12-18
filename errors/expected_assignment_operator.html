@@ -1,0 +1,76 @@
+<div class="feedback">
+
+	<p>You are probably missing an operator in your code:</p>
+
+	<p>A lot of the time, this could just be a missing assignment operator (i.e. the equals sign), but it can also be other operators like +, -, /, *, %, || and &&.</p>
+
+	<p>If you are trying to assign a value to a variable, then you should use the assignment operator (i.e. put an “=” sign after the variable name and before the value).</p>
+
+	<p>Otherwise, use the appropriate arithmetic operator (+, -, /, *, %) if you are calculating something, the appropriate boolean operator (||, &&) if you are combining logical expressions, or the comparison operator (==) is you are comparing two values.</p>
+
+	<div class="example">
+
+		<table>
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>String initial = "J";
+String surname = "Key";
+name initial + ". " + surname;</pre>
+				</td>
+				<td class="correctCode">
+<pre>String initial = "J";
+String surname = "Key";
+name = initial + ". " + surname;</pre>
+				</td>
+				<td class="explanation">
+					<p>Inserting an equals sign manages to fix most of these errors as they are assignments to a variable.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+
+	<div class="example">
+
+		<table>
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>if (age(int)(a*b)){  
+    overtimeHours = 2(normalHours);
+    if ((age < 20)  (age <=40)) {
+        overtimeHours = 0;     
+    }
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>if (age == (int)(a*b)){  
+    overtimeHours = 2*(normalHours);
+    if ((age < 20) || (age <=40)) {
+        overtimeHours = 0; 
+    }
+}</pre>
+				</td>
+				<td class="explanation">The first line attempts to compare the values of age and (int) a*b but is missing "==" to compare the values. The second lines issue can be solved by putting a multiplication between 2 and (normalHours). The issue in the second if statement be can be solved by putting a && or || after (age < 20) </td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>

@@ -1,0 +1,66 @@
+<div class="feedback">
+
+
+	<p>It appears that you have an incorrectly formatted for loop in your code.</p>
+
+	<p style="font-family: courier; font-size: 120%; color: #000;">
+		<span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+		<LINE>
+		</span>
+	</p>
+
+	<p>The only requirements of a for loop is having two semicolons in parenthesis, but the correct structure of a for loop is:</p>
+
+	<code><pre>
+	for(initialization; condition ; update)
+	{
+	   // statements
+	}
+	</pre></code>
+
+	<p>Where:</p>
+	<ul>
+		<li>The <code>initialization</code> declares a loop variable and sets it to an initial value.</li>
+		<li>The <code>condition</code> is a boolean expression and the body of the for loop will be executed only when this expression evaluates to true</li>
+		<li>The <code>update</code> changes the value of the loop variable each time through the loop</li>
+	</ul>
+
+	<p>Note that two semi-colons must be used to separate each of these three sections.</p>
+
+	<p>It is possible to rearrange this so the initialization and upadate are not within the parenthesis but this is the recommended way.</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int sum = 0;
+for (int i = 0 ; i < 10 i++) { 
+	sum += i;
+}</pre>
+				</td>
+				<td class="correctCode">
+<pre>int sum = 0;
+for (int i = 0 ; i < 10 ; i++) {
+	sum += i;
+}</pre>
+				</td>
+				<td class="explanation">
+				<p>The incorrect code is missing a semicolon after i < 10</p>
+				</td>
+			</tr>
+
+
+		</table>
+	
+	</div>
+
+</div>

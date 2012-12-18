@@ -1,0 +1,48 @@
+<div class="feedback">
+
+	<p>It appears you are trying to use .length() as a method on an array.</p>
+
+	<p style="font-family: courier; font-size: 120%; color: #000;">
+		<span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+		<LINE>
+		</span>
+	</p>
+
+	<p>Make sure you remember that length is a field in an array so should be accessed using yourArrayName.length</p>
+
+	<p>The .length() method is applicable for Strings though, and so should be accessed using stringName.length()</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int[] a = {1, 2, 3, 4, 5};
+int len = a.length();</pre>
+				</td>
+				<td class="correctCode">
+<pre>int[] a = {1, 2, 3, 4, 5};
+int len = a.length;</pre>
+				</td>
+				<td class="explanation">
+					<p>Length is not a method that can be called on an array variable – the parentheses should be removed.</p>
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+
+</div>
+
+
+
+

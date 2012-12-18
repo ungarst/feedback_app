@@ -1,0 +1,44 @@
+<div class="feedback">
+
+	<p>It looks like you are trying to cast an expression to a type that is not compatible.  It is OK to cast one numeric type to another (for example, you can cast a double to an int), but generally you can’t perform casts with more complex types.  </p>
+
+	<p style="font-family: courier; font-size: 120%; color: #000;">
+		<span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+		<LINE>
+		</span>
+	</p>
+
+	<p>Ensure that your variables are able to be casted from one type to another and try run your code again.</p>
+
+	<div class="example">
+
+		<table>
+
+			<tr>
+				<th></th>
+				<th>Incorrect Code</th>
+				<th>Correct Code</th>
+				<th>Explanation</th>
+			</tr>
+			<tr>
+				<td class="eHeader"><p>Example</p></td>
+				<td class="incorrectCode">
+<pre>int x;
+String s = "35.5";
+x = (int) s;</pre>
+				</td>
+				<td class="correctCode">
+<pre>int x;
+double d = 35.5;
+x = (int) d;</pre>
+				</td>
+				<td class="explanation">
+					<p>Strings cannot be casted to an integer, but doubles can (beware of lost precision). If you have a number in a string and want to convert it to an integer then you should use the Integer.parseInt(String s) method.</p>
+				</td>
+			</tr>
+			
+		</table>
+
+	</div>
+
+</div>
