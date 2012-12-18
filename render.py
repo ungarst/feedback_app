@@ -212,3 +212,13 @@ def unreachable_code (sub):
             i -= 2
             break
     return render_line(report_lines, i)
+
+def type_mismatch_return (sub):
+        report_lines = sub.report.split('\n')
+        for i, line in enumerate(report_lines):
+            if 'Type mismatch' in line:
+                i -= 2
+                break
+                
+        if 'return' in report_lines[i]:
+            return render_line(report_lines, i)
