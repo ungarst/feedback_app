@@ -108,6 +108,16 @@ def assigning_to_non_variable (sub):
     if diagnostic in sub.report:
         return('assigning_to_non_variable.html')
 
+def type_mismatch_return (sub):
+    if 'Type mismatch' in sub.report:
+        report_lines = sub.report.split('\n')
+        for i, line in enumerate(report_lines):
+            if 'Type mismatch' in line:
+                i -= 2:
+                break
+        if 'return' in report_lines[i]:
+            return 'wrong_return.html'
+
 def type_mismatch (sub):
     """ Diagnoses a type mismatch error. """
     match = re.search(r'Type mismatch: cannot convert from \w* to \w*',
