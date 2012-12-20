@@ -272,7 +272,7 @@ def invalid_assignment_operator (sub):
     match = re.search(r'Syntax error on token ".+", invalid AssignmentOperator',
                         sub.report)
     if match:
-        return('invalid_assignment_operator')
+        return('invalid_assignment_operator.html')
 
 def predicate_combination_operators_undefined (sub):
     """ Diagnoses the incorrect usage of the && and || operators.
