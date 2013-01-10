@@ -74,7 +74,7 @@ def diagnose (code, error):
                   return data
 
       if not detected:
-            return error
+            return '<pre>' + error + '</pre>'
 
                   
 
