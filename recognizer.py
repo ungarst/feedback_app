@@ -48,7 +48,7 @@ possible_errors = [
             (detector.incorrect_increment_or_decrement , render.incorrect_increment_or_decrement),
             (detector.variable_type_in_method_call , False),
             (detector.incomplete_for_loop , render.incomplete_for_loop),
-            (detector.illegal_modifier , False),
+            (detector.illegal_modifier , render.illegal_modifier),
             (detector.variable_type_in_brackets , False),
             (detector.including_main_header , False),
             (detector.comma_next_to_bracket , False),

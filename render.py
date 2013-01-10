@@ -234,3 +234,12 @@ def type_mismatch (sub):
             break
 
     return render_line(report_lines, i)
+
+def illegal_modifer (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines):
+        if 'Illegal modifer' in line:
+            i -= 2
+            break
+    return render_line(report_lines, i)
+
