@@ -252,4 +252,12 @@ def predicate_operators_undefined (sub):
         if match or match2:
             i -= 2
             break
-    return render_line(report_lines, i)            
+    return render_line(report_lines, i)   
+
+def out_of_place_semicolon (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines):
+        if 'Syntax error on token ";", delete this token' in line:
+            i -= 2
+            break
+    return render_line(report_lines, i)

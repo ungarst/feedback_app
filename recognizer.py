@@ -38,7 +38,7 @@ possible_errors = [
             (detector.using_length_as_method , render.using_length_as_method),
             (detector.not_double_equals , False),
             (detector.casting_error , render.casting_error),
-            (detector.out_of_place_semicolon , False),
+            (detector.out_of_place_semicolon , render.out_of_place_semicolon),
             (detector.assigning_to_non_variable , False),
             (detector.accessing_non_array , render.accessing_non_array),
             (detector.invalid_variable_name , render.invalid_variable_name),
