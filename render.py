@@ -7,7 +7,7 @@ def get_caret_index (line):
 def render_line (report, i):
     start, stop = get_caret_index(report[i+1]) 
     line = report[i]
-    return line[0:start] + '<span style = "color: #F00; font-weight: 900;">' + line[start:stop] + '</span>' + line[stop:]
+    return line[0:start] + '<span style = "color: #F00; font-weight: 900;">' + line[start:stop] + '</span>' + line[stop:].decode('utf-8')
 
 def accessing_non_array (sub):
     report_lines = sub.report.split('\n')
@@ -238,8 +238,7 @@ def type_mismatch (sub):
 def illegal_modifier (sub):
     report_lines = sub.report.split('\n')
     for i, line in enumerate(report_lines):
-        if 'Illegal modifer' in line:
+        if 'Illegal modifier' in line:
             i -= 2
             break
     return render_line(report_lines, i)
-
