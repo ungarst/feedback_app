@@ -222,3 +222,15 @@ def type_mismatch_return (sub):
                 
         if 'return' in report_lines[i]:
             return render_line(report_lines, i)
+
+def type_mismatch (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines): 
+        match = re.search(r'Type mismatch: cannot convert from \w* to \w*', 
+            line)
+
+        if match:
+            i -= 2
+            break
+
+    return render_line(report_lines, i)

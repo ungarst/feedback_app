@@ -6,7 +6,7 @@ possible_errors = [
             (detector.incorrect_return_type , False),
             (detector.missing_semicolon , render.missing_semicolon),
             (detector.type_mismatch_return, render.type_mismatch_return),
-            (detector.type_mismatch , False),
+            (detector.type_mismatch , render.type_mismatch),
             (detector.missing_closing_curly_brace , False),
             (detector.else_syntax_error , False),
             (detector.incorrect_if_statement , False),
