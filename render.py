@@ -242,3 +242,14 @@ def illegal_modifier (sub):
             i -= 2
             break
     return render_line(report_lines, i)
+
+def predicate_operators_undefined (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines): 
+        match = re.search(r'The operator (\=\=|\!\=|\<\=|\>\=) is undefined for the argument type\(s\)',
+                        line)
+        match2 = re.search(r'Incompatible operand types \w+ and \w+', line)
+        if match or match2:
+            i -= 2
+            break
+    return render_line(report_lines, i)            
