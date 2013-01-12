@@ -3,7 +3,7 @@ import submission, detector, lexer, render, re
 possible_errors = [
             (detector.variable_cannot_be_resolved , render.variable_cannot_be_resolved),
             (detector.no_return, False),
-            (detector.incorrect_return_type , False),
+            (detector.incorrect_return_type , render.incorrect_return_type), #only when with "must return a result of type..."
             (detector.missing_semicolon , render.missing_semicolon),
             (detector.type_mismatch_return, render.type_mismatch_return),
             (detector.type_mismatch , render.type_mismatch),
@@ -67,8 +67,13 @@ def diagnose (code, error):
 
                   if poss_error[1]:
                         line = poss_error[1](sub)
-                        print line
-                        data = data.replace( "<LINE>" , line)
+                        print "Can render"
+                        if line:
+                              print "GOt line"
+                              data = data.replace( "<LINE>" , line)
+                        else:
+                              print "no line"
+                              data = data.replace( "<LINE>" , "") 
                         
                         
                   return data

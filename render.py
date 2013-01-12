@@ -261,3 +261,17 @@ def out_of_place_semicolon (sub):
             i -= 2
             break
     return render_line(report_lines, i)
+
+def incorrect_return_type (sub):
+    report_lines = sub.report.split('\n')
+    match_found = False
+    for i, line in enumerate(report_lines):
+        if 'return expected' in line:
+            i -= 2
+            match_found = True
+            break
+    if not match_found:
+        return
+
+    return render_line(report_lines, i)
+
