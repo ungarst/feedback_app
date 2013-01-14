@@ -17,7 +17,7 @@ def illegal_predicate_operation (sub):
         * \\ I don't know why people are using that one
 
     """
-    match = re.search(r'.*if\s*\(.*(\=\!|\=\>|\=\<|\>\>|\<\<|\\\\).*\)',
+    match = re.search(r'.*if\s*\(.*(=\!|=>|=<|>>|<<|\\\\).*\)',
                         sub.report)
     if match:
         return 'illegal_predicate_operation.html'
@@ -466,9 +466,13 @@ def missing_outer_brackets_on_conditional (sub):
         e.g. if (x==10) && (y==8) {}
 
     """
-    diagnostic = 'invalid OnlySynchronized'
-    if diagnostic in sub.report:
-        return('missing_outer_brackets_on_conditional.html')
+    diagnostics = ['invalid OnlySynchronized',
+                    'Syntax error on token "&&", if expected',
+                    'Syntax error on token "||", if expected'
+                    ]
+    for diagnostic in diagnostics:
+        if diagnostic in sub.report:
+            return('missing_outer_brackets_on_conditional.html')
 
 # Check this last
 def expected_assignment_operator (sub):

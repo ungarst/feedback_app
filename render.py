@@ -121,11 +121,18 @@ def incorrect_operator_usage (sub):
 
 def missing_outer_brackets_on_conditional (sub):
     report_lines = sub.report.split('\n')
+    diagnostics = ['invalid OnlySynchronized',
+                    'Syntax error on token "&&", if expected',
+                    'Syntax error on token "||", if expected'
+                    ]
+    flag = False
     for i, line in enumerate(report_lines):
-        if 'invalid OnlySynchronized' in line:
-            i -= 2
-            break
-    return render_line(report_lines, i)
+        for diagnostic in diagnostics:
+            if diagnostic in line:
+                i -= 2
+                return render_line(report_lines, i)
+
+
 
 def multiple_returns (sub):
     match = re.search(r'return\s?\(\s?(\w+\s?,)+\s?\w+\)',
