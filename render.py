@@ -338,11 +338,20 @@ def single_equals_comparison (sub):
                 i -= 2
                 flag = True
                 break
-                
+
         if flag:
             break
     
     return render_line(report_lines, i)
+
+def not_double_equals (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines):
+        if 'The left-hand side of an assignment must be a variable' in line:
+            i -= 2
+            break
+            
+    return render_line(report_lines, i)    
 
 
 

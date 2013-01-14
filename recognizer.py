@@ -36,7 +36,8 @@ possible_errors = [
             (detector.illegal_predicate_operation , False),
             (detector.single_quotes_string , render.single_quotes_string),
             (detector.using_length_as_method , render.using_length_as_method),
-            (detector.not_double_equals , False),
+            (detector.not_double_equals , render.not_double_equals),
+            # need to get up to here to get most of the errors
             (detector.casting_error , render.casting_error),
             (detector.out_of_place_semicolon , render.out_of_place_semicolon),
             (detector.assigning_to_non_variable , False),
