@@ -2,10 +2,10 @@ import submission, detector, lexer, render, re
 
 possible_errors = [
             (detector.variable_cannot_be_resolved , render.variable_cannot_be_resolved),
-            (detector.no_return, False), #no need for a line to be shown
             (detector.incorrect_return_type , render.incorrect_return_type), #only when with "must return a result of type..."
             (detector.missing_semicolon , render.missing_semicolon),
             (detector.type_mismatch_return, render.type_mismatch_return),
+            (detector.no_return, False), #no need for a line to be shown
             (detector.type_mismatch , render.type_mismatch),
             (detector.missing_closing_curly_brace , False), #line is simply "}" no use in showing and no line numbers
             (detector.else_syntax_error , render.else_syntax_error), 
