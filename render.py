@@ -382,4 +382,24 @@ def assignment_not_using_equals (sub):
 
     return render_line(report_lines, i)    
 
+def invalid_assignment_operator (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines): 
+        match = re.search(r'Syntax error on token ".+", invalid AssignmentOperator', line)
+
+        if match:
+            i -= 2
+            break
+
+    return render_line(report_lines, i) 
+
+def too_many_closing_braces (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines):
+        if 'Syntax error on token ")", delete this token' in line:
+            i -= 2
+            break
+
+    return render_line(report_lines, i)    
+
 

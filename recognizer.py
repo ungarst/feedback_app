@@ -25,8 +25,8 @@ possible_errors = [
             (detector.invalid_invocation , render.invalid_invocation),
             (detector.variable_type_on_right_hand_side_of_equals , render.variable_type_on_right_hand_side_of_equals),
             (detector.type_cannot_be_resolved , render.type_cannot_be_resolved),
-            (detector.too_many_closing_braces , False),
-            (detector.invalid_assignment_operator , False),
+            (detector.too_many_closing_braces , render.too_many_closing_braces),
+            (detector.invalid_assignment_operator , render.invalid_assignment_operator),
             (detector.single_equals_comparison , render.single_equals_comparison),
             (detector.predicate_operators_undefined , render.predicate_operators_undefined),
             (detector.incorrect_operator_usage , render.incorrect_operator_usage),
@@ -75,7 +75,13 @@ def diagnose (code, error):
                               data = data.replace( "<LINE>" , line)
                         else:
                               print "no line"
-                              data = data.replace( "<LINE>" , "") 
+                              data = data.replace( """<div style = "margin: 20px;">
+      <p style="font-family: courier; font-size: 120%; color: #000;">
+            <span style = "background-color: #ffff99; padding: 10px; border: 1px solid #cc0;">
+            <LINE>
+            </span>
+      </p>
+</div>""" , "") 
                         
                         
                   return data
