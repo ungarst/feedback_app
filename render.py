@@ -314,6 +314,18 @@ def variable_type_on_right_hand_side_of_equals (sub):
             else:
                 return line 
 
+def predicate_combination_operators_undefined (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines): 
+        match = re.search(r'The operator (\&\&|\|\||\!) is undefined for the argument', 
+            line)
+
+        if match:
+            i -= 2
+            break
+
+    return render_line(report_lines, i)    
+
 
 
 

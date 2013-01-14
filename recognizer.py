@@ -30,7 +30,7 @@ possible_errors = [
             (detector.single_equals_comparsion , False),
             (detector.predicate_operators_undefined , render.predicate_operators_undefined),
             (detector.incorrect_operator_usage , render.incorrect_operator_usage),
-            (detector.predicate_combination_operators_undefined , False),
+            (detector.predicate_combination_operators_undefined , render.predicate_combination_operators_undefined),
             (detector.empty_square_braces , render.empty_square_braces),
             (detector.assignment_not_using_equals , False),
             (detector.illegal_predicate_operation , False),
