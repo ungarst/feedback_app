@@ -23,7 +23,7 @@ possible_errors = [
             (detector.undefined_user_method , False),
             (detector.undefined_library_method , render.undefined_library_method),
             (detector.invalid_invocation , render.invalid_invocation),
-            (detector.variable_type_on_right_hand_side_of_equals , False),
+            (detector.variable_type_on_right_hand_side_of_equals , render.variable_type_on_right_hand_side_of_equals),
             (detector.type_cannot_be_resolved , render.type_cannot_be_resolved),
             (detector.too_many_closing_braces , False),
             (detector.invalid_assignment_operator , False),

@@ -303,6 +303,17 @@ def if_without_conditional (sub):
 
     return lines[i]
 
+def variable_type_on_right_hand_side_of_equals (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines):
+        match = re.search(r'=\s+(int(?!e)|double|String|boolean|char)(\[\])?', line)
+        if match:
+            match2 = re.search(r'Syntax error on token \"(int(?!e)|double|String|boolean|char)(\[\])?\"', report_lines[i+2])
+            if match2:
+                return render_line(report_lines, i)
+            else:
+                return line 
+
 
 
 
