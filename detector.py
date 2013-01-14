@@ -394,7 +394,7 @@ def variable_type_in_method_call (sub):
 
 def conditional_not_in_brackets (sub):
     """ Diagnoses conditional not in brackets. """
-    match = re.search(r'if(?!\s*\()', sub.code)
+    match = re.search(r'if(?!(\s*\(|\w))', sub.code)
     if match:
         return('conditional_not_in_brackets.html')
 

@@ -2,20 +2,20 @@ import submission, detector, lexer, render, re
 
 possible_errors = [
             (detector.variable_cannot_be_resolved , render.variable_cannot_be_resolved),
-            (detector.no_return, False),
+            (detector.no_return, False), #no need for a line to be shown
             (detector.incorrect_return_type , render.incorrect_return_type), #only when with "must return a result of type..."
             (detector.missing_semicolon , render.missing_semicolon),
             (detector.type_mismatch_return, render.type_mismatch_return),
             (detector.type_mismatch , render.type_mismatch),
-            (detector.missing_closing_curly_brace , False),
-            (detector.else_syntax_error , False),
-            (detector.incorrect_if_statement , False),
+            (detector.missing_closing_curly_brace , False), #line is simply "}" no use in showing and no line numbers
+            (detector.else_syntax_error , render.else_syntax_error), 
+            (detector.incorrect_if_statement , False), #too general, see nonrender file
+            (detector.conditional_not_in_brackets , render.conditional_not_in_brackets),
             (detector.missing_closing_bracket , False),
             (detector.duplicate_variable , render.duplicate_variable),
             (detector.too_many_curly_braces , False),
             (detector.missing_opening_curly_brace, False),
             (detector.incorrect_arguments , render.incorrect_arguments),
-            (detector.conditional_not_in_brackets , False),
             (detector.if_without_conditional , False),
             (detector.variable_not_initialized , render.variable_not_initialized),
             (detector.unreachable_code , render.unreachable_code), 
@@ -60,7 +60,9 @@ def diagnose (code, error):
 
       sub = submission.Submission(code, error)
       for poss_error in possible_errors:
+            print str(poss_error)
             detected = poss_error[0](sub)
+
             if detected:
                   with open('errors/' + detected, "r") as f:
                         data = f.read()
