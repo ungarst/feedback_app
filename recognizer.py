@@ -9,8 +9,8 @@ possible_errors = [
             (detector.type_mismatch , render.type_mismatch),
             (detector.missing_closing_curly_brace , False), #line is simply "}" no use in showing and no line numbers
             (detector.else_syntax_error , render.else_syntax_error), 
-            (detector.incorrect_if_statement , False), #too general, see nonrender file
             (detector.conditional_not_in_brackets , render.conditional_not_in_brackets),
+            (detector.incorrect_if_statement , False), #too general, see nonrender file
             (detector.missing_closing_bracket , False),
             (detector.duplicate_variable , render.duplicate_variable),
             (detector.too_many_curly_braces , False),
