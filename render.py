@@ -350,9 +350,29 @@ def not_double_equals (sub):
         if 'The left-hand side of an assignment must be a variable' in line:
             i -= 2
             break
-            
+
     return render_line(report_lines, i)    
 
+def illegal_predicate_operation (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines): 
+        match = re.search(r'.*if\s*\(.*(=!|=>|=<|>>|<<|\\\\).*\)',
+                        line)
 
+        if match:
+            break
+
+    return render_line(report_lines, i)    
+
+def assignment_not_using_equals (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines): 
+        match = re.search(r'Syntax error on token ".*", = expected', line)
+
+        if match:
+            i -= 2
+            break
+
+    return render_line(report_lines, i)    
 
 

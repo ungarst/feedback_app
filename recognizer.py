@@ -32,8 +32,8 @@ possible_errors = [
             (detector.incorrect_operator_usage , render.incorrect_operator_usage),
             (detector.predicate_combination_operators_undefined , render.predicate_combination_operators_undefined),
             (detector.empty_square_braces , render.empty_square_braces),
-            (detector.assignment_not_using_equals , False),
-            (detector.illegal_predicate_operation , False),
+            (detector.assignment_not_using_equals , render.assignment_not_using_equals),
+            (detector.illegal_predicate_operation , render.illegal_predicate_operation),
             (detector.single_quotes_string , render.single_quotes_string),
             (detector.using_length_as_method , render.using_length_as_method),
             (detector.not_double_equals , render.not_double_equals),
@@ -59,7 +59,8 @@ possible_errors = [
 
 def diagnose (code, error):
 
-      sub = submission.Submission(code, error)
+      sub = submission.Submission(lexer.begin_lex(code), error)
+
       for poss_error in possible_errors:
             detected = poss_error[0](sub)
             if detected:
