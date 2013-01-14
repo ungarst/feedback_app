@@ -10,13 +10,13 @@ possible_errors = [
             (detector.missing_closing_curly_brace , False), #line is simply "}" no use in showing and no line numbers
             (detector.else_syntax_error , render.else_syntax_error), 
             (detector.conditional_not_in_brackets , render.conditional_not_in_brackets),
+            (detector.if_without_conditional , render.if_without_conditional),
             (detector.incorrect_if_statement , False), #too general, see nonrender file
             (detector.missing_closing_bracket , False),
             (detector.duplicate_variable , render.duplicate_variable),
-            (detector.too_many_curly_braces , False),
+            (detector.too_many_curly_braces , False), #line is simply "}" no use in showing and no line numbers
             (detector.missing_opening_curly_brace, False),
             (detector.incorrect_arguments , render.incorrect_arguments),
-            (detector.if_without_conditional , False),
             (detector.variable_not_initialized , render.variable_not_initialized),
             (detector.unreachable_code , render.unreachable_code), 
             (detector.including_method_header , False),
@@ -60,9 +60,7 @@ def diagnose (code, error):
 
       sub = submission.Submission(code, error)
       for poss_error in possible_errors:
-            print str(poss_error)
             detected = poss_error[0](sub)
-
             if detected:
                   with open('errors/' + detected, "r") as f:
                         data = f.read()
@@ -71,7 +69,7 @@ def diagnose (code, error):
                         line = poss_error[1](sub)
                         print "Can render"
                         if line:
-                              print "GOt line"
+                              print "GOt line - " + line
                               data = data.replace( "<LINE>" , line)
                         else:
                               print "no line"

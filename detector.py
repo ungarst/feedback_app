@@ -394,7 +394,7 @@ def variable_type_in_method_call (sub):
 
 def conditional_not_in_brackets (sub):
     """ Diagnoses conditional not in brackets. """
-    match = re.search(r'if(?!(\s*\(|\w))', sub.code)
+    match = re.search(r'if(?!(\s*\(|\s*\{|\w))', sub.code)
     if match:
         return('conditional_not_in_brackets.html')
 
@@ -479,7 +479,7 @@ def expected_assignment_operator (sub):
 
 def if_without_conditional (sub):
     """ Diagnoses using an if without testing it against a conditional. """
-    match = re.search(r'if\s*{', sub.code)
+    match = re.search(r'if\s*\{', sub.code)
     if match:
         return('if_without_conditional.html')
 

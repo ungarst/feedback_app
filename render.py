@@ -287,7 +287,17 @@ def conditional_not_in_brackets (sub):
     lines = sub.code.split('\n')
     for i, line in enumerate(lines):
         print i
-        match = re.search(r'if(?!(\s*\(|\w))', line)
+        match = re.search(r'if(?!(\s*\(|\s*\{|\w))', line)
+        if match:
+            break
+
+    if match: return lines[i]
+
+def if_without_conditional (sub):
+    lines = sub.code.split('\n')
+    for i, line in enumerate(lines):
+        print i
+        match = re.search(r'if\s*\{', line)
         if match:
             break
 
