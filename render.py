@@ -286,7 +286,6 @@ def else_syntax_error (sub):
 def conditional_not_in_brackets (sub):
     lines = sub.code.split('\n')
     for i, line in enumerate(lines):
-        print i
         match = re.search(r'if(?!(\s*\(|\s*\{|\w))', line)
         if match:
             break
@@ -296,7 +295,6 @@ def conditional_not_in_brackets (sub):
 def if_without_conditional (sub):
     lines = sub.code.split('\n')
     for i, line in enumerate(lines):
-        print i
         match = re.search(r'if\s*\{', line)
         if match:
             break
@@ -324,7 +322,27 @@ def predicate_combination_operators_undefined (sub):
             i -= 2
             break
 
-    return render_line(report_lines, i)    
+    return render_line(report_lines, i)   
+    
+def single_equals_comparison (sub):
+    diagnostics = ['Syntax error on token "=", <= expected',
+                    'Syntax error on token "=", != expected',
+                    'Syntax error on token "=", >= expected']
+
+    report_lines = sub.report.split('\n')
+    flag = False
+    for i, line in enumerate(report_lines):
+        for diag in diagnostics:
+
+            if diag in line:
+                i -= 2
+                flag = True
+                break
+                
+        if flag:
+            break
+    
+    return render_line(report_lines, i)
 
 
 

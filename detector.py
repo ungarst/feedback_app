@@ -448,14 +448,14 @@ def multiple_returns (sub):
     if match:
         return('multiple_returns.html')
 
-def single_equals_comparsion (sub):
+def single_equals_comparison (sub):
     """ Diagnoses trying to compare using a single equals. """
     diagnostics = ['Syntax error on token "=", <= expected',
                     'Syntax error on token "=", != expected',
                     'Syntax error on token "=", >= expected']
     for diagnostic in diagnostics:
         if diagnostic in sub.report:       
-            return('single_equals_comparsion.html')
+            return('single_equals_comparison.html')
             break
 
 def missing_outer_brackets_on_conditional (sub):

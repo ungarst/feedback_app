@@ -27,7 +27,7 @@ possible_errors = [
             (detector.type_cannot_be_resolved , render.type_cannot_be_resolved),
             (detector.too_many_closing_braces , False),
             (detector.invalid_assignment_operator , False),
-            (detector.single_equals_comparsion , False),
+            (detector.single_equals_comparison , render.single_equals_comparison),
             (detector.predicate_operators_undefined , render.predicate_operators_undefined),
             (detector.incorrect_operator_usage , render.incorrect_operator_usage),
             (detector.predicate_combination_operators_undefined , render.predicate_combination_operators_undefined),
