@@ -71,12 +71,15 @@ def incorrect_increment_or_decrement (sub):
             ]
 
     report_lines = sub.report.split('\n')
+    flag = False
     for i, line in enumerate(report_lines):
-        print line
         for diagnostic in diagnostics:
             if diagnostic in line:
                 i -= 2
+                flag = True
                 break
+                
+        if flag: break
 
     return render_line(report_lines, i)
 
