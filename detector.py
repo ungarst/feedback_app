@@ -249,7 +249,7 @@ def including_main_header (sub):
 
 def including_method_header (sub):
     """ Diagnoses including method header which is done by the compiler. """
-    match = re.search(r'(public|private) \w*(\[\])? .+\(.+\).*\n?{?', sub.code)
+    match = re.search(r'(public|private) \w*(\[\])? .+\(.+\).*\n?{?', sub.report)
     if match and 'public static void main(String args[])' not in match.group():
         return('including_method_header.html')
 

@@ -20,7 +20,7 @@ possible_errors = [
             (detector.variable_not_initialized , render.variable_not_initialized),
             (detector.unreachable_code , render.unreachable_code), 
             (detector.including_method_header , False),
-            (detector.undefined_user_method , False),
+            (detector.undefined_user_method , render.undefined_user_method),
             (detector.undefined_library_method , render.undefined_library_method),
             (detector.invalid_invocation , render.invalid_invocation),
             (detector.variable_type_on_right_hand_side_of_equals , render.variable_type_on_right_hand_side_of_equals),

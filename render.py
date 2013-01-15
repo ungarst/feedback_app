@@ -400,6 +400,19 @@ def too_many_closing_braces (sub):
             i -= 2
             break
 
-    return render_line(report_lines, i)    
+    return render_line(report_lines, i)   
+
+def undefined_user_method (sub):
+    report_lines = sub.report.split('\n')
+    for i, line in enumerate(report_lines): 
+        match = re.search(r'The method [\w\.\,\(\) ]+ is undefined for the type user', line)
+
+        if match:
+            i -= 2
+            break
+
+    return render_line(report_lines, i) 
+
+
 
 
