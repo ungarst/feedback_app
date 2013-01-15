@@ -2,7 +2,7 @@ import re
 
 MULTILINE_COMMENT_EXPR = re.compile(r"/\*.*?\*/")
 EOL_COMMENT_EXPR = re.compile(r"//.*?\n")
-WHITESPACE_EXPR = re.compile(r'\s+')
+WHITESPACE_EXPR = re.compile(r'[\ \t]+')
 
 def lex_multiline_comment(s):
     match = MULTILINE_COMMENT_EXPR.match(s)
