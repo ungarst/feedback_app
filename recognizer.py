@@ -2,7 +2,8 @@ import submission, detector, lexer, render, re
 
 possible_errors = [
             (detector.variable_cannot_be_resolved , render.variable_cannot_be_resolved),
-            (detector.no_return, False), #no need for a line to be shown
+            (detector.no_return , False),
+            (detector.multiple_returns ,  render.multiple_returns),
             (detector.incorrect_return_type , render.incorrect_return_type), #only when with "must return a result of type..."
             (detector.missing_semicolon , render.missing_semicolon),
             (detector.type_mismatch_return, render.type_mismatch_return),
@@ -53,7 +54,6 @@ possible_errors = [
             (detector.variable_type_in_brackets , False),
             (detector.including_main_header , False),
             (detector.comma_next_to_bracket , False),
-            (detector.multiple_returns , render.multiple_returns),
             (detector.expected_assignment_operator , False)
             ]
 
